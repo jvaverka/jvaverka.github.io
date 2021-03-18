@@ -21,6 +21,7 @@ The Julia Markdown parser in Julia's stdlib is not exactly complete and Franklin
 or also for images
 
 ![][some image]
+![][some image]
 
 some people find that useful as it allows referring multiple times to the same link for instance.
 

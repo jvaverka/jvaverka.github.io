@@ -7,6 +7,7 @@
 * page with tag [`syntax`](/tag/syntax/)
 * page with tag [`image`](/tag/image/)
 * page with tag [`code`](/tag/code/)
+* page with tag [`blog`](/tag/blog/)
 
 \toc
 
