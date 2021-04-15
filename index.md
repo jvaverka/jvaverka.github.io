@@ -1,4 +1,4 @@
-@def title = "jakev.xyz"
+@def title = "vaverka - code and thoughts"
 @def tags = ["home", "about"]
 
 # About
