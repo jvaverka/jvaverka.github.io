@@ -7,7 +7,7 @@ before_script:
 pages:
   stage: deploy
   script:
-    - julia --project=@. -e '
+    - julia -e '
         import Pkg; Pkg.activate("."); Pkg.instantiate();
         using NodeJS; run(`$(npm_cmd()) install highlight.js`);
         using Franklin;
