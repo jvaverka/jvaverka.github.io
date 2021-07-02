@@ -1,13 +1,20 @@
-@def title = "vaverka - code and thoughts"
+@def title = "Hello World"
 @def tags = ["home", "about"]
 
-# About
+# :wave: :earth_americas:
 
-I have been a professional developer at [General Motors](https://www.gm.com/) since 2016
-after graduating with a Mathematics degree from [University of Georgia](https://www.uga.edu/).
+On this site I keep notes on mathematics, software development, and related topics.
 
-I have been fortunate in my time at GM to learn many technical skills and apply them to a variety of areas across our IT organization. My work revolves around [CFD](https://en.wikipedia.org/wiki/Computational_fluid_dynamics) and [CAE](https://en.wikipedia.org/wiki/Computer-aided_engineering). More specifically, my team drives to create a highly productive ecosystem for vehicle simulations. We build powerful tools which enable engineers to leverage free-and-open-source software in our high performance computing environment.
+## About
 
-My involvement in this open-source initiative _(along with my continued interest in mathematics and physics)_ led me to the Julia Programming Language in 2018. Julia has proven to be a great way for me to express my ideas through code. So don't be surprised to learn that I take on many projects with Julia, including this website. See more details in the page foot.
+I've been working at General Motors as a software & application developer since 2016,
+building powerful tools to help engineers leverage free-and-open-source software
+for vehicle simulations in our high performance computing environment.
 
-When I'm not coding, I'm spending time with family. I love cooking, movies and board games.
+I obtained a Bachelor of Science in Mathematics at the University of Georgia,
+and I'm currently working toward a Master of Science in Applied & Computational
+Mathematics at Johns Hopkins University.
+
+A course in Matrix Theory led me to the Julia Programming Language in 2018.
+Julia has helped me clearly express my ideas through code ever since.
+I enjoy it so much, even this website is written in Julia!

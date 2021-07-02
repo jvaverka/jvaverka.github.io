@@ -1,6 +1,11 @@
-@def title = "Posts"
-@def tags = ["blog"]
++++
+title = "Blog Posts"
++++
+
+@@posts-container,mx-auto,px-3,py-3
 
 # Blog Posts
 
-* [5 Years with General Motors](/blog/five_years_with_gm)
+{{allposts}}
+
+@@

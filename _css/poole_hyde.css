@@ -142,6 +142,17 @@ dl {
   list-style: none;
 }
 
+ul.post-date {
+  list-style: disc;
+}
+
+li span.post-date {
+  float: right;
+  color: #767676;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
 dt {
   font-weight: bold;
 }

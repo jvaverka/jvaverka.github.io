@@ -4,7 +4,7 @@ website.
 The website_* must be defined for the RSS to work
 -->
 @def website_title = "Vaverka"
-@def website_descr = "code by Jacob Vaverka"
+@def website_descr = "code and thoughts by Jacob Vaverka"
 @def website_url   = "Vaverka.gitlab.io"
 
 @def author = "Jacob Vaverka"
