@@ -8,8 +8,9 @@ pages:
   stage: deploy
   script:
     - julia --project=@. -e 'import Pkg; Pkg.instantiate();
+      using NodeJS; run(`$(npm_cmd()) install highlight.js`);
       using Franklin;
-      serve()'
+      optimize()'
     - mv __site public
   artifacts:
     paths:

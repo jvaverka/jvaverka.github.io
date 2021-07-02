@@ -1,10 +1,10 @@
 +++
-title = "Madison"
+title = "People"
 date = Date(2021, 07, 01)
 +++
-@def tags = ["posts","madison"]
+@def tags = ["posts","people"]
 
 # Hi
 
-it's madison
+it's people
 
