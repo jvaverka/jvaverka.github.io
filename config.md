@@ -10,6 +10,9 @@ The website_* must be defined for the RSS to work
 @def author = "Jacob Vaverka"
 
 @def mintoclevel = 2
+@def maxtoclevel = 3
+
+@def div_content = "franklin-content"
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise

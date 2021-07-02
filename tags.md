@@ -1,10 +1,11 @@
 +++
 title = "All Tags"
-hascode = false
-date = Date(2021, 07, 02)
 +++
-@def tags = ["tags"]
 
-# All Tags
+@@posts-container,mx-auto,px-3,py-3
+
+# All tags
 
 @@tagslist {{list_tags}} @@
+
+@@

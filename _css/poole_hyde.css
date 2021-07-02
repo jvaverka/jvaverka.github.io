@@ -143,7 +143,7 @@ dl {
 }
 
 ul.post-date {
-  list-style: disc;
+  list-style: none;
 }
 
 li span.post-date {
@@ -180,6 +180,42 @@ abbr {
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
+}
+
+.tags {
+  color: var(--bs-secondary);
+  font-size: large;
+  font-style: oblique;
+  padding-bottom: 1.5rem;
+  /* font-variant:  */
+}
+
+.tags a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+.tag-link {
+  font-size: 120%;
+}
+
+a.tag-link:hover {
+  color: #f93
+}
+
+.tag-count {
+  font-size: 120%;
+  padding-right: 1.5em;
+}
+
+.tagslist {
+  line-height: 2.25em;
+  max-width: 90%;
+}
+
+a#tag-icon {
+  border-bottom: none;
+  padding-right: 5px
 }
 
 /* Quotes */
@@ -358,4 +394,14 @@ a.sidebar-nav-item:focus {
     margin-left: 15rem;
     margin-right: 2rem;
   }
+}
+
+.posts-container {
+  max-width: 760px;
+}
+
+@media (min-width: 40em) {
+    .posts-container {
+        font-size: 18px
+    }
 }

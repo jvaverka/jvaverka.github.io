@@ -5,6 +5,8 @@ date = Date(2021, 1, 16)
 +++
 @def tags = ["posts"]
 
+{{page_tags}}
+
 # Five Years with General Motors
 January 2016 marked the dawn of a new age. I had my fair share of difficulty breaking into the job market, but I was steadfast in my pursuit of a workplace to call home. Armed with a math degree and determination, I lucked into an interview with General Motors IT. Here I am five years later! So this feels like the perfect time to reflect on my journey so far.
 

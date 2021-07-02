@@ -1,5 +1,4 @@
 @def title = "Hello World"
-@def tags = ["home", "about"]
 
 # :wave: :earth_americas:
 

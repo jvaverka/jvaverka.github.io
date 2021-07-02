@@ -9,8 +9,9 @@
 <body>
   {{insert sidebar.html}}
   <div class="{{div_content}}">
-    <h1>Tag: {{fill fd_tag}}</h1>
-    {{taglist}}
+    <h1>Tag: <span style="color: rgba(242,156,19,255)">{{fill fd_tag}}</span></h1>
+    <!-- {{taglist}} -->
+    {{tag_list}}
     {{insert page_foot.html}}
   </div>
 </body>
