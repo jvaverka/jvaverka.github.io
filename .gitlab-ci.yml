@@ -7,10 +7,12 @@ before_script:
 pages:
   stage: deploy
   script:
-    - julia --project=@. -e 'import Pkg; Pkg.instantiate();
-      using NodeJS; run(`$(npm_cmd()) install highlight.js`);
-      using Franklin;
-      optimize()'
+    - julia --project=@. -e '
+        import Pkg; Pkg.activate("."); Pkg.instantiate();
+        using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+        using Franklin;
+        optimize()
+        '
     - mv __site public
   artifacts:
     paths:
