@@ -1,7 +1,7 @@
 # display all blog posts
 function hfun_allposts()::String
     # gather list of relative paths to blog posts
-    rpaths = [joinpath("content", splitext(pn)[1]) for pn in readdir("content")]
+    rpaths = [joinpath("content", splitext(pn)[1]) for pn in readdir("content") if endswith(pn, ".md")]
     # define sorting algorithm based on `data` page variable
     # use creation time if no `data` page variable exists
     sorter(p) = begin

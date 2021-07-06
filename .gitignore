@@ -1,5 +1,9 @@
+# default
 __site/
 .DS_Store
 franklin
 franklin.pub
 node_modules/
+# Literate.jl content
+content/invsci-01.md
+content/3087656210.png
