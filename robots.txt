@@ -1,0 +1,4 @@
+Sitemap: Vaverka.gitlab.io/sitemap.xml
+
+User-agent: *
+Disallow:
