@@ -32,3 +32,4 @@ newsite("mySite", template="pure-sm")
 - add plot options to literate script
 - outline first post
 - move to gh pages
+- change landing page to show latest posts
