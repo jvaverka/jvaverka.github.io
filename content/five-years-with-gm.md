@@ -9,6 +9,10 @@ date = Date(2021, 1, 16)
 
 # Five Years with General Motors
 
+\toc
+
+## General Motors
+
 January 2016 marked the dawn of a new age. I had my fair share of difficulty
 breaking into the job market, but I was steadfast in my pursuit of a workplace
 to call home. Armed with a math degree and determination, I lucked into an

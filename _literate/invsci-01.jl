@@ -1,4 +1,8 @@
-# # Problem 4
+# # Investment Science - Module 1
+#
+# \tableofcontents
+#
+# ## Problem 4
 # The IRR is generally calculated using an iterative procedure.
 # Suppose that we define $f(\lambda) = -a_{1} + a_{2}\lambda^{2} + \ldots + a_{n}\lambda^{n}$,
 # where all $a_{i}$'s are positive and $n > 1$.
@@ -23,7 +27,7 @@
 # Try the procedure on $f(\lambda) = -1 + \lambda + \lambda^{2}$.
 # Start with $\lambda_{0} = 1$ and compute four additional estimates.
 #
-# ## Solution
+# ### Solution
 #
 # We know
 #
@@ -53,7 +57,7 @@ end
 ## display results
 @show λs
 
-# # Problem 5
+# ## Problem 5
 #
 # Suppose that you have the opportunity to plant trees that alter can be sold for lumber. This project requires an initial outlay of money in order to purchase and plant the seedlings. No other cash flow occurs until trees are harvested. However, you have a choice as to when to harvest. If you harvest after 1 year, you get your return quickly; but if you wait, the trees will have additional growth and the revenue generated from the sale of the trees will be greater. Assume that the case flow streams associated with these alternatives are:
 #
@@ -65,7 +69,7 @@ end
 #
 # The prevailing interest rate is 10%. When is the best time to cut the trees?
 #
-# ## Solution
+# ### Solution
 #
 # Let’s first define a function for calculating the Net Present Value, say on a cash flow stream that looks like $(x_{0}, \ldots, x_{n})$ where $r$ is the prevailing interest rate and $k$ is the number of years waited to harvest:
 #
