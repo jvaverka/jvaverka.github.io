@@ -26,3 +26,9 @@ If you want to start with a [template](9https://github.com/tlienart/FranklinTemp
 ```julia
 newsite("mySite", template="pure-sm")
 ```
+
+## TODO
+
+- add plot options to literate script
+- outline first post
+- move to gh pages
