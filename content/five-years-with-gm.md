@@ -1,9 +1,9 @@
 +++
 title = "Five Years with General Motors"
-hascode = false
 date = Date(2021, 1, 16)
+hascode = false
+tags = ["career"]
 +++
-@def tags = ["posts"]
 
 {{page_tags}}
 
