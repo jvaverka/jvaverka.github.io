@@ -1,6 +1,6 @@
 # Franklin.jl Blog :ringed_planet:
 
-## Install Franklin.jl
+## Install Franklin
 
 First, install the [Julia Programming Language](https://julialang.org/).
 
