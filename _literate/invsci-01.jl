@@ -98,7 +98,15 @@ show(df)
 
 maximum(values)
 #+
-using Plots
+using PyPlot
+figure(figsize=(4, 2))
 plot(df.year, df.revenue)
 
+xlabel("Year", fontsize=14)
+ylabel("Revenue", fontsize=14)
+
+plt.savefig(joinpath(@OUTPUT, "invsci-01-time-to-harvest.svg")) # hide
+
+# \figalt{Time to Harvest}{invsci-01-time-to-harvest.svg}
+#
 # We can see that the graph levels off at the top, and upon inspection of the table we confirm that **years 9 and 10** will yield optimal revenue.
