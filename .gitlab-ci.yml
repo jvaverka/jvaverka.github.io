@@ -12,9 +12,9 @@ pages:
         using NodeJS;
         run(`$(npm_cmd()) install highlight.js`);
         Pkg.add("DataFrames");
-        ENV["PYTHON"]=""     # do not use system level python
-        Pkg.build("PyCall")  # reconfigure PyCall to use Conda.jl
-        Pkg.add("PyPlot");   # install with Conda.jl
+        ENV["PYTHON"]="";
+        Pkg.build("PyCall");
+        Pkg.add("PyPlot");
         using Franklin;
         optimize()
         '
