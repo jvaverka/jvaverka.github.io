@@ -102,12 +102,12 @@ show(df)
 
 maximum(values)
 #+
-using PyPlot
-figure(figsize=(4, 2))
-plot(df.year, df.revenue)
+using PyPlot;
+figure(figsize=(4, 2));
+plot(df.year, df.revenue);
 
-xlabel("Year", fontsize=14)
-ylabel("Revenue", fontsize=14)
+xlabel("Year", fontsize=14);
+ylabel("Revenue", fontsize=14);
 
 plt.savefig(joinpath(@OUTPUT, "invsci-01-time-to-harvest.svg")) # hide
 
