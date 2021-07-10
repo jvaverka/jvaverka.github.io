@@ -11,6 +11,8 @@ pages:
         import Pkg; Pkg.activate("."); Pkg.instantiate();
         using NodeJS;
         run(`$(npm_cmd()) install highlight.js`);
+        import Pkg; Pkg.add("DataFrames");
+        import Pkg; Pkg.add("PyPlot");
         using Franklin;
         optimize()
         '
