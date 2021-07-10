@@ -36,6 +36,7 @@ jobs:
             using Pkg; Pkg.activate("."); Pkg.instantiate();
             using NodeJS; run(`$(npm_cmd()) install highlight.js purgecss`);
             import Pkg; Pkg.add("DataFrames");
+            import Pkg; Pkg.add("PyPlot");
             Pkg.add(Pkg.PackageSpec(name="Franklin", rev="master"));
             using Franklin;
             optimize();
