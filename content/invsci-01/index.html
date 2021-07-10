@@ -26,10 +26,27 @@ end
 @show values</code></pre><pre><code class=plaintext >values = Any[0.8181818181818181, 1.4793388429752063, 2.00525920360631, 2.4150672768253525, 2.72552793835493, 2.95131751037644, 3.1052649458456516, 3.1985664218875973, 3.240976183724846, 3.240976183724846, 3.2059267937767064, 3.142200630234634, 3.055301316313628, 2.9499688145911955, 2.8302727899066134, 2.6996953084325246, 2.5612040402024294, 2.417317008275058, 2.270159816531156, 2.1215161885070124]
 </code></pre> <p>To make reading easier, we can create a table or <code>dataframe</code>.</p> <pre><code class=language-julia >using DataFrames
 df &#61; DataFrame&#40;Dict&#40;:year &#61;&gt; 1:20, :revenue &#61;&gt; values&#41;&#41;
-show&#40;df&#41;</code></pre><pre><code class=plaintext >ArgumentError: Package DataFrames not found in current path:
-- Run `import Pkg; Pkg.add("DataFrames")` to install the DataFrames package.
-
-</code></pre> <p>A quick glance reveals the maximum revenue.</p> <pre><code class=language-julia >maximum&#40;values&#41;</code></pre><pre><code class=plaintext >3.240976183724846</code></pre>
+show&#40;df&#41;</code></pre><pre><code class=plaintext >20×2 DataFrame
+ Row │ revenue   year
+     │ Any       Int64
+─────┼─────────────────
+   1 │ 0.818182      1
+   2 │ 1.47934       2
+   3 │ 2.00526       3
+   4 │ 2.41507       4
+   5 │ 2.72553       5
+   6 │ 2.95132       6
+   7 │ 3.10526       7
+   8 │ 3.19857       8
+  ⋮  │    ⋮        ⋮
+  14 │ 2.94997      14
+  15 │ 2.83027      15
+  16 │ 2.6997       16
+  17 │ 2.5612       17
+  18 │ 2.41732      18
+  19 │ 2.27016      19
+  20 │ 2.12152      20
+         5 rows omitted</code></pre> <p>A quick glance reveals the maximum revenue.</p> <pre><code class=language-julia >maximum&#40;values&#41;</code></pre><pre><code class=plaintext >3.240976183724846</code></pre>
 <pre><code class=language-julia >using PyPlot
 figure&#40;figsize&#61;&#40;4, 2&#41;&#41;
 plot&#40;df.year, df.revenue&#41;
@@ -44,7 +61,7 @@ ylabel&#40;&quot;Revenue&quot;, fontsize&#61;14&#41;</code></pre><pre><code clas
 
 <div class=page-foot >
   <div class=copyright >
-      &copy; Jacob Vaverka. Last modified: July 09, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl.
+      &copy; Jacob Vaverka. Last modified: July 10, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl.
   </div>
 </div>
 </div>

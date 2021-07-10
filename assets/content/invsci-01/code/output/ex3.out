@@ -1,3 +1,21 @@
-ArgumentError: Package DataFrames not found in current path:
-- Run `import Pkg; Pkg.add("DataFrames")` to install the DataFrames package.
-
+20×2 DataFrame
+ Row │ revenue   year
+     │ Any       Int64
+─────┼─────────────────
+   1 │ 0.818182      1
+   2 │ 1.47934       2
+   3 │ 2.00526       3
+   4 │ 2.41507       4
+   5 │ 2.72553       5
+   6 │ 2.95132       6
+   7 │ 3.10526       7
+   8 │ 3.19857       8
+  ⋮  │    ⋮        ⋮
+  14 │ 2.94997      14
+  15 │ 2.83027      15
+  16 │ 2.6997       16
+  17 │ 2.5612       17
+  18 │ 2.41732      18
+  19 │ 2.27016      19
+  20 │ 2.12152      20
+         5 rows omitted
