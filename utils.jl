@@ -77,6 +77,18 @@ function hfun_tag_list()
     return Franklin.fd2html(String(take!(io)), internal=true)
 end
 
+# publish Julia Markdown documents directly in page
+# `{{weave2html filename.jmd}}`
+# just don't forget to strip away Weave.jl generated head & foot
+function hfun_weave2html(document)
+	f_name = tempname(pwd()) * ".html"
+	weave(first(document), out_path = f_name)
+	text = read(f_name, String)
+	final = "<!DOCTYPE html>\n<HTML lang = \"en\">" * split(text, "</HEAD>")[2]
+	rm(f_name)
+	return final
+end
+
 # linkedin icon
 hfun_svg_linkedin() = """<svg width="30" height="30" viewBox="0 50 512 512"><path fill="currentColor" d="M150.65 100.682c0 27.992-22.508 50.683-50.273 50.683-27.765 0-50.273-22.691-50.273-50.683C50.104 72.691 72.612 50 100.377 50c27.766 0 50.273 22.691 50.273 50.682zm-7.356 86.651H58.277V462h85.017V187.333zm135.901 0h-81.541V462h81.541V317.819c0-38.624 17.779-61.615 51.807-61.615 31.268 0 46.289 22.071 46.289 61.615V462h84.605V288.085c0-73.571-41.689-109.131-99.934-109.131s-82.768 45.369-82.768 45.369v-36.99z"/></svg>"""
 
