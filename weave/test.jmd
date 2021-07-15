@@ -1,0 +1,36 @@
+---
+title   : A Single Factor Model
+subtitle: Captial Asset Pricing Model (CAPM)
+author  : Jacob Vaverka
+date    : `j import Dates; Dates.Date(Dates.now())`
+urlcolor: blue
+documentclass: article
+fontsize: 12pt
+geometry: margin=1in
+---
+
+The single factor model is related to the Capital Asset Pricing Model (CAPM),
+which explains that investors need to be compensated for two main things:
+time value and risk.  The time value portion of the return is captured by a
+risk-free rate.  The risk of a security is captured by a risk measure that
+compares returns of the asset to returns of the market (a market premium).
+In form:
+
+$\bar{r}_{a} = r_{f} + \beta_{a}(\bar{r}_{m} - r_{f})$
+
+``r_{f}`` is the risk free rate.
+
+``\beta_{a}`` is the beta of the security.
+
+``\bar{r}_{m}`` is the market permium (excess return).
+
+The concept of a single factor model follows very closely to the theories
+behind the CAPM.  If we were to extend the CAPM idea of return being composed
+of the some unexplained return characteristic and some relationship to a market
+premium, we can construct a factor model doing just that:
+
+## Reference Material
+
+This content originated from
+[Here](https://factorinvestingtutorial.wordpress.com/1-a-single-factor-model/).
+
