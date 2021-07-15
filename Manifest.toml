@@ -104,11 +104,11 @@ version = "0.4.2"
 
 [[Franklin]]
 deps = ["Dates", "DelimitedFiles", "DocStringExtensions", "ExprTools", "FranklinTemplates", "HTTP", "Literate", "LiveServer", "Logging", "Markdown", "NodeJS", "OrderedCollections", "Pkg", "REPL", "Random"]
-git-tree-sha1 = "6980906f1c87a38006846dd8a2ba45c63c977d1a"
+git-tree-sha1 = "2c167123b640c90702a0e926e42fa9757757eed1"
 repo-rev = "master"
 repo-url = "https://github.com/tlienart/Franklin.jl.git"
 uuid = "713c75ef-9fc9-4b05-94a9-213340da978e"
-version = "0.10.41"
+version = "0.10.42"
 
 [[FranklinTemplates]]
 deps = ["LiveServer"]
