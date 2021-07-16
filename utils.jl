@@ -1,3 +1,7 @@
+using Dates
+using Franklin
+using Weave
+
 # display all blog posts
 function hfun_allposts()::String
     # gather list of relative paths to blog posts
@@ -5,7 +9,7 @@ function hfun_allposts()::String
     # define sorting algorithm based on `data` page variable
     # use creation time if no `data` page variable exists
     sorter(p) = begin
-        pvd = pagevar(p, :date)
+        pvd = Franklin.pagevar(p, :date)
         if isnothing(pvd)
             return Date(Dates.unix2datetime(stat(p * ".md").ctime))
         end
@@ -19,8 +23,8 @@ function hfun_allposts()::String
     # create html list items with url, title, and publication date
     for rp in rpaths
         url = get_url(rp)
-        title = pagevar(rp, :title)
-        pubdate = Dates.format(Date(pagevar(rp, :date)), "U d, Y")
+        title = Franklin.pagevar(rp, :title)
+        pubdate = Dates.format(Date(Franklin.pagevar(rp, :date)), "U d, Y")
         write(c, "<li><p><span class=\"post-date tag\">$pubdate</span><nobr><a href=\"/$rp/\">$title</a></nobr></p></li>")
     end
     # finish the html
@@ -30,8 +34,8 @@ function hfun_allposts()::String
 end
 
 # display all tags and their count
-@delay function hfun_list_tags()
-    tagpages = globvar("fd_tag_pages")
+Franklin.@delay function hfun_list_tags()
+    tagpages = Franklin.globvar("fd_tag_pages")
     if tagpages === nothing
         return ""
     end
@@ -51,16 +55,16 @@ end
 
 # doesn't need to be delayed because it's generated at tag generation, after everything else
 function hfun_tag_list()
-    tag = locvar(:fd_tag)::String
+    tag = Franklin.locvar(:fd_tag)::String
     items = Dict{Date,String}()
-    for rpath in globvar("fd_tag_pages")[tag]
-        title = pagevar(rpath, "title")
+    for rpath in Franklin.globvar("fd_tag_pages")[tag]
+        title = Franklin.pagevar(rpath, "title")
         url = Franklin.get_url(rpath)
         surl = strip(url, '/')
-        date = Date(pagevar(rpath, :date))
+        date = Date(Franklin.pagevar(rpath, :date))
         date_str = Dates.format(date, "U d, Y")
         tmp = "* ~~~<span class=\"post-date tag\">$date_str</span><nobr><a href=\"$url\">$title</a></nobr>"
-        descr = pagevar(rpath, :descr)
+        descr = Franklin.pagevar(rpath, :descr)
         if descr !== nothing
             tmp *= ": <span class=\"post-descr\">$descr</span>"
         end
@@ -78,15 +82,25 @@ function hfun_tag_list()
 end
 
 # publish Julia Markdown documents directly in page
-# `{{weave2html filename.jmd}}`
+# `{{weave2html path/to/file.jmd}}`
 # just don't forget to strip away Weave.jl generated head & foot
 function hfun_weave2html(document)
-	f_name = tempname(pwd()) * ".html"
-	weave(first(document), out_path = f_name)
-	text = read(f_name, String)
-	final = "<!DOCTYPE html>\n<HTML lang = \"en\">" * split(text, "</HEAD>")[2]
-	rm(f_name)
-	return final
+    f_name = tempname(pwd()) * ".html"
+    weave(first(document), out_path = f_name)
+    text = read(f_name, String)
+    final =
+        "<!DOCTYPE html>\n<HTML lang = \"en\">" * split(text, "</HEAD>")[2] |> # Splits the weave document on the head block
+        x ->
+            replace(x, r"<span class='hljl-.*?>" => "") |> # Removes weave code block syntax
+            x ->
+                replace(x, "</span>" => "") |> # Removes weave code block syntax
+                x ->
+                    replace(
+                        x,
+                        "<pre class='hljl'>\n" => "<pre><code class = \"language-julia\">", # Replaces weave code block syntax with Franklin's
+                    ) |> x -> replace(x, "</pre>" => "</code></pre>") # Replaces weave code block syntax with Franklin's
+    rm(f_name)
+    return final
 end
 
 # linkedin icon
@@ -102,11 +116,11 @@ hfun_svg_gitlab() = """<svg width="34" height="30" xmlns="http://www.w3.org/2000
 hfun_svg_tag() = """<a href="/tags/" id="tag-icon"><svg width="20" height="20" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#141f38}</style></defs><path class="cls-1" d="M215.8 512a76.1 76.1 0 0 1-54.17-22.44L22.44 350.37a76.59 76.59 0 0 1 0-108.32L242 22.44A76.11 76.11 0 0 1 296.2 0h139.2A76.69 76.69 0 0 1 512 76.6v139.19A76.08 76.08 0 0 1 489.56 270L270 489.56A76.09 76.09 0 0 1 215.8 512zm80.4-486.4a50.69 50.69 0 0 0-36.06 14.94l-219.6 219.6a51 51 0 0 0 0 72.13l139.19 139.19a51 51 0 0 0 72.13 0l219.6-219.61a50.67 50.67 0 0 0 14.94-36.06V76.6a51.06 51.06 0 0 0-51-51zm126.44 102.08A38.32 38.32 0 1 1 461 89.36a38.37 38.37 0 0 1-38.36 38.32zm0-51a12.72 12.72 0 1 0 12.72 12.72 12.73 12.73 0 0 0-12.72-12.76z"/><path class="cls-1" d="M217.56 422.4a44.61 44.61 0 0 1-31.76-13.16l-83-83a45 45 0 0 1 0-63.52L211.49 154a44.91 44.91 0 0 1 63.51 0l83 83a45 45 0 0 1 0 63.52L249.31 409.24a44.59 44.59 0 0 1-31.75 13.16zm-96.7-141.61a19.34 19.34 0 0 0 0 27.32l83 83a19.77 19.77 0 0 0 27.31 0l108.77-108.7a19.34 19.34 0 0 0 0-27.32l-83-83a19.77 19.77 0 0 0-27.31 0l-108.77 108.7z"/><path class="cls-1" d="M294.4 281.6a12.75 12.75 0 0 1-9-3.75l-51.2-51.2a12.8 12.8 0 0 1 18.1-18.1l51.2 51.2a12.8 12.8 0 0 1-9.05 21.85zM256 320a12.75 12.75 0 0 1-9.05-3.75l-51.2-51.2a12.8 12.8 0 0 1 18.1-18.1l51.2 51.2A12.8 12.8 0 0 1 256 320zM217.6 358.4a12.75 12.75 0 0 1-9-3.75l-51.2-51.2a12.8 12.8 0 1 1 18.1-18.1l51.2 51.2a12.8 12.8 0 0 1-9.05 21.85z"/></svg></a>"""
 
 # display all tags for a selected post
-@delay function hfun_page_tags()
-    pagetags = globvar("fd_page_tags")
+Franklin.@delay function hfun_page_tags()
+    pagetags = Franklin.globvar("fd_page_tags")
     pagetags === nothing && return ""
     io = IOBuffer()
-    tags = pagetags[splitext(locvar("fd_rpath"))[1]] |> collect |> sort
+    tags = pagetags[splitext(Franklin.locvar("fd_rpath"))[1]] |> collect |> sort
     several = length(tags) > 1
     write(io, """<div class="tags">$(hfun_svg_tag())""")
     for tag in tags[1:end-1]
