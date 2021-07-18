@@ -22,7 +22,6 @@ function hfun_allposts()::String
     write(c, "<ul class=\"post-date\">")
     # create html list items with url, title, and publication date
     for rp in rpaths
-        url = get_url(rp)
         title = Franklin.pagevar(rp, :title)
         pubdate = Dates.format(Date(Franklin.pagevar(rp, :date)), "U d, Y")
         write(c, "<li><p><span class=\"post-date tag\">$pubdate</span><nobr><a href=\"/$rp/\">$title</a></nobr></p></li>")
@@ -60,7 +59,6 @@ function hfun_tag_list()
     for rpath in Franklin.globvar("fd_tag_pages")[tag]
         title = Franklin.pagevar(rpath, "title")
         url = Franklin.get_url(rpath)
-        surl = strip(url, '/')
         date = Date(Franklin.pagevar(rpath, :date))
         date_str = Dates.format(date, "U d, Y")
         tmp = "* ~~~<span class=\"post-date tag\">$date_str</span><nobr><a href=\"$url\">$title</a></nobr>"
@@ -121,7 +119,6 @@ Franklin.@delay function hfun_page_tags()
     pagetags === nothing && return ""
     io = IOBuffer()
     tags = pagetags[splitext(Franklin.locvar("fd_rpath"))[1]] |> collect |> sort
-    several = length(tags) > 1
     write(io, """<div class="tags">$(hfun_svg_tag())""")
     for tag in tags[1:end-1]
         t = replace(tag, "_" => " ")
