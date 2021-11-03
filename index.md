@@ -2,18 +2,18 @@
 
 # :wave: :earth_americas:
 
-On this site I keep notes on mathematics, software development, and related topics.
+This site is where I keep notes on mathematics, software development and related
+topics.
 
-## About
+Hopefully, this site will prove useful to my future self and maybe even some
+interested readers. RSS feed will also be available soon if anyone wishes to
+keep up with posts that way.
 
-I've been working at General Motors as a software & application developer since 2016,
-building powerful tools to help engineers leverage free-and-open-source software
-for vehicle simulations in our high performance computing environment.
-
-I obtained a Bachelor of Science in Mathematics at the University of Georgia,
-and I'm currently working toward a Master of Science in Applied & Computational
-Mathematics at Johns Hopkins University.
-
-A course in Matrix Theory led me to the Julia Programming Language in 2018.
-Julia has helped me clearly express my ideas through code ever since.
-I enjoy it so much, even this website is written in Julia!
+@@note
+    Content on this site aims to be accurate, interesting and useful.
+    However, I do not guarantee correctness.
+    If you spot errors or wish to request more content on a particular topic,
+    please consider opening
+    [an issue](https://github.com/jvaverka/jvaverka.github.io/issues/new)
+    on GitHub.
+@@

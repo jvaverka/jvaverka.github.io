@@ -21,7 +21,9 @@ You can create a vanilla site by running `newsite` with no arguments.
 newsite()
 ```
 
-If you want to start with a [template](9https://github.com/tlienart/FranklinTemplates.jl), **pur-sm** for example, pass that to the `template` keyword.
+If you want to start with a
+[template](9https://github.com/tlienart/FranklinTemplates.jl), **pure-sm** for
+example, pass that to the `template` keyword.
 
 ```julia
 newsite("mySite", template="pure-sm")
