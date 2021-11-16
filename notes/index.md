@@ -1,0 +1,7 @@
++++
+title = "Notes"
++++
+
+## Notes
+
+{{ allnotes }}

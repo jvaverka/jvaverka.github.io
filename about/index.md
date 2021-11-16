@@ -1,0 +1,20 @@
+@def title = "About"
+
+@@bio
+
+## Bio
+
+Hello :wave: I am a
+
+- :dart: sales engineer at Julia Computing
+- :rocket: open-source software developer
+- :school_satchel: student of applied mathematics
+- :trophy: runner & yogi
+- :books: reader of sci-fi & non-fiction
+
+## Julia
+
+I enjoy coding in Julia because I find it easy to clearly express my ideas as
+code. I enjoy it so much, I even wrote this website in Julia!
+
+@@

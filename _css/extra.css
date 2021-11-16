@@ -1,0 +1,84 @@
+/* ==================================================================
+    Cover
+================================================================== */
+
+.cover-container {
+  max-width: 54em;
+  height: 50vh;
+  margin-top: 5%;
+  padding-bottom: 10%;
+}
+
+/* On narrow device, reduce margins. */
+@media (min-height: 1400px) {
+  .cover-container {
+    margin-top: 0;
+    padding-bottom: 0%;
+  }
+}
+
+.lead {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover-mug {
+  text-align: center;
+}
+
+.cover-mug img {
+  width: 30%;
+  min-width: 75px;
+  max-width: 150px;
+  border-radius: 50%;
+  padding-bottom: 1.5em;
+  margin-top: 20%;
+}
+
+.cover-lead {
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+.cover-container h1 {
+  font-size: 28px;
+  padding-bottom: 0.5em;
+  border-bottom: 3px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* ==================================================================
+    Notes
+================================================================== */
+
+ul.notes {
+  list-style: none;
+  padding-left: 0;
+}
+
+li span.note {
+  float: right;
+  color: #767676;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
+span.note-descr {
+    font-style: italic;
+    font-size: 90%;
+}
+
+/* ==================================================================
+    Bio
+================================================================== */
+
+.bio {
+  max-width: 54em;
+}
+
+.bio ul {
+    list-style: none;
+}
