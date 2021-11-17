@@ -4,7 +4,7 @@
 
 ## Bio
 
-Hello :wave: I am a
+:wave: :earth_africa: I am a
 
 - :dart: sales engineer at Julia Computing
 - :rocket: open-source software developer
@@ -17,4 +17,4 @@ Hello :wave: I am a
 I enjoy coding in Julia because I find it easy to clearly express my ideas as
 code. I enjoy it so much, I even wrote this website in Julia!
 
-@@
+@@ <!-- bio -->

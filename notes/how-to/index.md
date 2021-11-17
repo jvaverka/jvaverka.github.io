@@ -1,7 +1,7 @@
 @def title = "Franklin Example"
 @def descr = "here is a detailed description"
 @def date = Date(2018, 3, 22)
-@def tags = ["syntax", "code"]
+@def tags = ["syntax", "code", "free"]
 
 # How to use Franklin
 

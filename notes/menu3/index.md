@@ -2,6 +2,7 @@
 title = "Menu 3"
 descr = ""
 date = Date(2019, 3, 22)
+tags = ["syntax", "code", "free"]
 +++
 
 # Working with tags
