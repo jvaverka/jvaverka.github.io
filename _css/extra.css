@@ -92,17 +92,24 @@ span.note-descr {
   justify-content: center;
 }
 
-.tag {
-  text-align: center;
+.tag a {
+  margin: 0em 0em 0em 1em;
+  padding: 0em 0em 0em 1em;
 }
 
 .tag span {
-  padding-left: 3em;
+  margin: 0em 1em 0em 0em;
+  padding: 0em 1em 0em 0em;
 }
 
 @media (max-width: 1400px) {
   .tag span {
-    padding-left: 0.5em;
+    margin: 0em;
+    padding: 0em 1em 0em 0em;
+  }
+  .tag a {
+    margin: 0em;
+    padding: 0em;
   }
 }
 
@@ -114,16 +121,16 @@ span.note-descr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 2em;
+  padding: 2em;
 }
 
 .social-icon {
   text-align: center;
-  padding-bottom: 1em;
+  padding: 1em 0.25em;
 }
 
 @media (max-width: 1400px) {
   .social-container {
-      padding-top: 0em;
+      padding: 0em;
     }
 }

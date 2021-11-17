@@ -80,8 +80,8 @@ Franklin.@delay function hfun_alltags()
         write(io, """
             <div class="tag">
               <nobr>
-              <span class="tag-count"> ($c)</span>
-              <a href="/tag/$t/" class="tag-link">$(replace(t, "_" => " "))</a>
+              <a class="tag" href="/tag/$t/">$(replace(t, "_" => " "))</a>
+              <span class="tag"> ($c)</span>
               </nobr>
             </div>
             """)
