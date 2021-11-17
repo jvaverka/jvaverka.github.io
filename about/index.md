@@ -1,4 +1,6 @@
-@def title = "About"
++++
+title = "About | Jacob Vaverka"
++++
 
 @@bio
 

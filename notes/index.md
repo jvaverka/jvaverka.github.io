@@ -1,5 +1,5 @@
 +++
-title = "Notes"
+title = "Notes | Jacob Vaverka"
 +++
 
 ## Notes

@@ -1,6 +1,6 @@
 +++
 author = "Jacob Vaverka"
-title = "Jacob Vaverka's Personal Website"
+title = "Jacob Vaverka"
 mintoclevel = 2
 cover = false
 ignore = ["node_modules/", "archive/"]
