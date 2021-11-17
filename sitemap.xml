@@ -2,50 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>Vaverka.gitlab.io/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/more-goodies/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/content/test/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/about/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/about/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/menu3/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/tags/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/weave-example/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/posts/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/content/five-years-of-software-development/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/content/invsci-01/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/code-blocks/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>Vaverka.gitlab.io/404/index.html</loc>
-    <lastmod>2021-11-03</lastmod>
+    <loc>https://jvaverka.github.io/notes/how-to/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://jvaverka.github.io/notes/invsci-01/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://jvaverka.github.io/notes/five-years-of-software-development/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://jvaverka.github.io/404/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>

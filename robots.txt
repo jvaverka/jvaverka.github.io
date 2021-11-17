@@ -1,4 +1,4 @@
-Sitemap: Vaverka.gitlab.io/sitemap.xml
+Sitemap: https://jvaverka.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
