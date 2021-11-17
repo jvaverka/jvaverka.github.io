@@ -67,8 +67,8 @@ li span.note {
 }
 
 span.note-descr {
-    font-style: italic;
-    font-size: 90%;
+  font-style: italic;
+  font-size: 90%;
 }
 
 /* ==================================================================
@@ -80,5 +80,5 @@ span.note-descr {
 }
 
 .bio ul {
-    list-style: none;
+  list-style: none;
 }

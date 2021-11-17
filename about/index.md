@@ -9,8 +9,8 @@ Hello :wave: I am a
 - :dart: sales engineer at Julia Computing
 - :rocket: open-source software developer
 - :school_satchel: student of applied mathematics
-- :trophy: runner & yogi
 - :books: reader of sci-fi & non-fiction
+- :trophy: runner & yogi
 
 ## Julia
 
