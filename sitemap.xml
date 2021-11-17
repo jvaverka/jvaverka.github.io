@@ -14,12 +14,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://jvaverka.github.io/notes/menu3/index.html</loc>
-    <lastmod>2021-11-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>https://jvaverka.github.io/notes/weave-example/index.html</loc>
     <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -32,19 +26,13 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://jvaverka.github.io/notes/how-to-use-franklin/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://jvaverka.github.io/notes/index.html</loc>
-    <lastmod>2021-11-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://jvaverka.github.io/notes/code-blocks/index.html</loc>
-    <lastmod>2021-11-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://jvaverka.github.io/notes/how-to/index.html</loc>
     <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -56,7 +44,19 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://jvaverka.github.io/notes/working-with-tags/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://jvaverka.github.io/notes/five-years-of-software-development/index.html</loc>
+    <lastmod>2021-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://jvaverka.github.io/notes/working-with-code-blocks/index.html</loc>
     <lastmod>2021-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
