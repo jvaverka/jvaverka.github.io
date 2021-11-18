@@ -13,13 +13,70 @@
     </title>
     <link> https://jvaverka.github.io </link>
     <description>
-      <![CDATA[  Jacob Vaverka&#39;s collection of notes and projects.  ]]>
+      <![CDATA[  A collection of notes about math, code, and more.  ]]>
     </description>
     <atom:link
       href="https://jvaverka.github.io/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
+
+<item>
+  <title>
+    <![CDATA[  Weave Example  ]]>
+  </title>
+  <link> https://jvaverka.github.io/notes/weave-example/index.html </link>
+  <guid> https://jvaverka.github.io/notes/weave-example/index.html </guid>
+  <description>
+    <![CDATA[  This is a Weave.jl and RSS test.  ]]>
+  </description>  
+    
+  <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Jacob Vaverka</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Investment Science 01  ]]>
+  </title>
+  <link> https://jvaverka.github.io/notes/invsci-01/index.html </link>
+  <guid> https://jvaverka.github.io/notes/invsci-01/index.html </guid>
+  <description>
+    <![CDATA[  This is a Literate.jl and RSS test.  ]]>
+  </description>  
+    
+  <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Jacob Vaverka</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Five Years of Software Development  ]]>
+  </title>
+  <link> https://jvaverka.github.io/notes/five-years-of-software-development/index.html </link>
+  <guid> https://jvaverka.github.io/notes/five-years-of-software-development/index.html </guid>
+  <description>
+    <![CDATA[  Reflecting on my career thus far.  ]]>
+  </description>  
+    
+  <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Jacob Vaverka</atom:name>
+  </atom:author>
+        
+</item>
 
 <item>
   <title>
@@ -42,6 +99,25 @@
 
 <item>
   <title>
+    <![CDATA[  Working with Tags  ]]>
+  </title>
+  <link> https://jvaverka.github.io/notes/working-with-tags/index.html </link>
+  <guid> https://jvaverka.github.io/notes/working-with-tags/index.html </guid>
+  <description>
+    <![CDATA[  This is a RSS test.  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Jacob Vaverka</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Working with Code blocks  ]]>
   </title>
   <link> https://jvaverka.github.io/notes/working-with-code-blocks/index.html </link>
@@ -51,6 +127,25 @@
   </description>  
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Jacob Vaverka</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Franklin Example  ]]>
+  </title>
+  <link> https://jvaverka.github.io/notes/how-to-use-franklin/index.html </link>
+  <guid> https://jvaverka.github.io/notes/how-to-use-franklin/index.html </guid>
+  <description>
+    <![CDATA[  This is a Franklin Example and RSS test.  ]]>
+  </description>  
+    
+  <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
