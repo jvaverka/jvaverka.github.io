@@ -1,6 +1,7 @@
 +++
 title = "Five Years of Software Development"
 descr = "Reflection and lessons learned after the first five years of my career."
+rss = "Reflecting on my career thus far."
 date = Date(2021, 1, 16)
 hascode = false
 tags = ["career"]
