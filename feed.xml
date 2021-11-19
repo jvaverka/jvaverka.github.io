@@ -30,8 +30,39 @@
   <description>
     <![CDATA[  This is a Weave.jl and RSS test.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<!DOCTYPE html>
+<HTML lang = "en"><BODY>
+  <div class ="container">
+    <div class = "row">
+      <div class = "col-md-12 twelve columns">
+        <div class="title">
+          
+          
+          
+        </div>        <h1>Hello World</h1>
+<pre><code class = "language-julia">2 + 2
+</code></pre>
+<pre class="output">
+4
+</code></pre>
+<p>The above was a cell written in Weave&#33; How cool is that?</p>
+        <HR/>
+        <div class="footer">
+          <p>
+            Published from <a href="test.jmd">test.jmd</a>
+            using <a href="http://github.com/JunoLab/Weave.jl">Weave.jl</a> v0.10.10 on 2021-11-19.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BODY></HTML> ]]>
+  </content:encoded>
     
-  <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -49,6 +80,113 @@
   <description>
     <![CDATA[  This is a Literate.jl and RSS test.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  <h1 id="investment_science_-_module_1">Investment Science - Module 1</h1>
+<div class="franklin-toc"><ol><li>Problem 4<ol><li>Solution</li></ol></li><li>Problem 5<ol><li>Solution</li></ol></li></ol></div>
+<h2 id="problem_4">Problem 4</h2>
+<p>The IRR is generally calculated using an iterative procedure. Suppose that we define \(f(\lambda) = -a_{1} + a_{2}\lambda^{2} + \ldots + a_{n}\lambda^{n}\), where all \(a_{i}\)&#39;s are positive and \(n > 1\). Here is an iterative technique that generates a sequence \(\lambda_{0}, \lambda_{1}, \lambda_{2}, \ldots \lambda_{k}, \ldots\) of estimates that converges to the root \(\overline{\lambda} > 0\), solving \(f(\overline{\lambda}) = 0\). Start with any \(\lambda_{0} > 0\) close to the solution. Assuming \(\lambda_{k}\) has been calculated, evaluate</p>
+\[
+f'(\lambda_{k}) = a_{1} + 2a_{2}\lambda_{k} + 3a_{3}\lambda_{k}^{2} + \ldots + na_{n}\lambda_{k}^{n-1}
+\]
+<p>and define</p>
+\[
+\lambda_{k+1} = \lambda_{k} - \frac{f(\lambda_{k})}{f'(\lambda_{k})}
+\]
+<p>This is Newton&#39;s method. It is based on approximating the function \(f\) by a line tangent to its graph at \(\lambda_{k}\). Try the procedure on \(f(\lambda) = -1 + \lambda + \lambda^{2}\). Start with \(\lambda_{0} = 1\) and compute four additional estimates.</p>
+<h3 id="solution">Solution</h3>
+<p>We know</p>
+\[
+\begin{aligned}
+\lambda_{0} &= 1 \\
+\lambda_{k+1} &= \lambda_{k} - \frac{f(\lambda_{k})}{f'(\lambda_{k})} \\
+f(\lambda) &= -1 + \lambda + \lambda^{2} \\
+f'(\lambda) &= 1 + 2\lambda \\
+\end{aligned}
+\]
+<p>Using all these equations we can compute four additional estimates.</p>
+<pre><code class="language-julia"># define function f
+f&#40;λ&#41; &#61; -1 &#43; λ &#43; λ^2
+# define derivative of f
+ḟ&#40;λ&#41; &#61; 1 &#43; 2*λ
+# define function to calculate the next λ
+next&#40;λ&#41; &#61; λ - f&#40;λ&#41;/ḟ&#40;λ&#41;
+# create a list of λs starting with 1
+λs &#61; &#91;1.0&#93;
+# calculate next four
+for n ∈ 1:4
+    push&#33;&#40;λs, next&#40;λs&#91;n&#93;&#41;&#41;
+end
+# display results
+@show λs</code></pre><pre><code class="plaintext code-output">λs = [1.0, 0.6666666666666667, 0.6190476190476191, 0.6180344478216818, 0.618033988749989]
+</code></pre>
+<h2 id="problem_5">Problem 5</h2>
+<p>Suppose that you have the opportunity to plant trees that alter can be sold for lumber. This project requires an initial outlay of money in order to purchase and plant the seedlings. No other cash flow occurs until trees are harvested. However, you have a choice as to when to harvest. If you harvest after 1 year, you get your return quickly; but if you wait, the trees will have additional growth and the revenue generated from the sale of the trees will be greater. Assume that the case flow streams associated with these alternatives are:</p>
+<ul>
+<li><p>Wait \(1\) year: \((-1, 2)\)</p>
+</li>
+<li><p>Wait \(2\) year: \((-1, ,0, 3)\)</p>
+</li>
+<li><p>Wait \(3\) year: \((-1, 0, 0, 4)\)</p>
+</li>
+<li><p>\(\vdots\)</p>
+</li>
+<li><p>Wait \(n\) year: \((-1, 0, 0, \ldots, n+1)\)</p>
+</li>
+</ul>
+<p>The prevailing interest rate is 10&#37;. When is the best time to cut the trees?</p>
+<h3 id="solution__2">Solution</h3>
+<p>Let’s first define a function for calculating the Net Present Value, say on a cash flow stream that looks like \((x_{0}, \ldots, x_{n})\) where \(r\) is the prevailing interest rate and \(k\) is the number of years waited to harvest:</p>
+\[
+NPV = -x_{0} + \frac{x_{k}}{(1+r)^{k}}
+\]
+<p>We can create a function to calculate the <strong><em>NPV</em></strong> given a <em>cash flow stream</em> and <em>interest rate</em>. Let&#39;s create a table of the first several values to determine the optimal time to harvest.</p>
+<pre><code class="language-julia"># define function to calculate net present value
+function net_present_value&#40;investment, revenue, year, rate&#41;
+    -investment &#43; revenue/&#40;1&#43;rate&#41;^year
+end
+# define empty array for values
+values &#61; &#91;&#93;
+# populate some values
+for i ∈ 1:20
+    append&#33;&#40;values, net_present_value&#40;1, i&#43;1, i, 0.10&#41;&#41;
+end
+# display some values
+@show values</code></pre><pre><code class="plaintext code-output">values = Any[0.8181818181818181, 1.4793388429752063, 2.00525920360631, 2.4150672768253525, 2.72552793835493, 2.95131751037644, 3.1052649458456516, 3.1985664218875973, 3.240976183724846, 3.240976183724846, 3.2059267937767064, 3.142200630234634, 3.055301316313628, 2.9499688145911955, 2.8302727899066134, 2.6996953084325246, 2.5612040402024294, 2.417317008275058, 2.270159816531156, 2.1215161885070124]
+</code></pre>
+<p>To make reading easier, we can create a table or <code>dataframe</code>.</p>
+<pre><code class="language-julia">using DataFrames
+df &#61; DataFrame&#40;Dict&#40;:year &#61;&gt; 1:20, :revenue &#61;&gt; values&#41;&#41;
+show&#40;df&#41;</code></pre><pre><code class="plaintext code-output">20×2 DataFrame
+ Row │ revenue   year
+     │ Any       Int64
+─────┼─────────────────
+   1 │ 0.818182      1
+   2 │ 1.47934       2
+   3 │ 2.00526       3
+   4 │ 2.41507       4
+   5 │ 2.72553       5
+   6 │ 2.95132       6
+   7 │ 3.10526       7
+   8 │ 3.19857       8
+  ⋮  │    ⋮        ⋮
+  14 │ 2.94997      14
+  15 │ 2.83027      15
+  16 │ 2.6997       16
+  17 │ 2.5612       17
+  18 │ 2.41732      18
+  19 │ 2.27016      19
+  20 │ 2.12152      20
+         5 rows omitted</code></pre>
+<p>A quick glance reveals the maximum revenue.</p>
+<pre><code class="language-julia">maximum&#40;values&#41;</code></pre><pre><code class="plaintext code-output">3.240976183724846</code></pre>
+<pre><code class="language-julia">using PyPlot;
+figure&#40;figsize&#61;&#40;8, 6&#41;&#41;;
+plot&#40;df.year, df.revenue&#41;;xlabel&#40;&quot;Year&quot;, fontsize&#61;14&#41;;
+ylabel&#40;&quot;Revenue&quot;, fontsize&#61;14&#41;;</code></pre>
+<img src="https://jvaverka.github.io/assets/notes/invsci-01/code/output/invsci-01-time-to-harvest.svg" alt="Time to Harvest">
+<p>We can see that the graph levels off at the top, and upon inspection of the table we confirm that <strong>years 9 and 10</strong> will yield optimal revenue.</p> ]]>
+  </content:encoded>
     
   <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>  
   
@@ -68,6 +206,27 @@
   <description>
     <![CDATA[  Reflecting on my career thus far.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="tags"><a href="https://jvaverka.github.io/tags/" id="tag-icon"><svg width="20" height="20" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#141f38}</style></defs><path class="cls-1" d="M215.8 512a76.1 76.1 0 0 1-54.17-22.44L22.44 350.37a76.59 76.59 0 0 1 0-108.32L242 22.44A76.11 76.11 0 0 1 296.2 0h139.2A76.69 76.69 0 0 1 512 76.6v139.19A76.08 76.08 0 0 1 489.56 270L270 489.56A76.09 76.09 0 0 1 215.8 512zm80.4-486.4a50.69 50.69 0 0 0-36.06 14.94l-219.6 219.6a51 51 0 0 0 0 72.13l139.19 139.19a51 51 0 0 0 72.13 0l219.6-219.61a50.67 50.67 0 0 0 14.94-36.06V76.6a51.06 51.06 0 0 0-51-51zm126.44 102.08A38.32 38.32 0 1 1 461 89.36a38.37 38.37 0 0 1-38.36 38.32zm0-51a12.72 12.72 0 1 0 12.72 12.72 12.73 12.73 0 0 0-12.72-12.76z"/><path class="cls-1" d="M217.56 422.4a44.61 44.61 0 0 1-31.76-13.16l-83-83a45 45 0 0 1 0-63.52L211.49 154a44.91 44.91 0 0 1 63.51 0l83 83a45 45 0 0 1 0 63.52L249.31 409.24a44.59 44.59 0 0 1-31.75 13.16zm-96.7-141.61a19.34 19.34 0 0 0 0 27.32l83 83a19.77 19.77 0 0 0 27.31 0l108.77-108.7a19.34 19.34 0 0 0 0-27.32l-83-83a19.77 19.77 0 0 0-27.31 0l-108.77 108.7z"/><path class="cls-1" d="M294.4 281.6a12.75 12.75 0 0 1-9-3.75l-51.2-51.2a12.8 12.8 0 0 1 18.1-18.1l51.2 51.2a12.8 12.8 0 0 1-9.05 21.85zM256 320a12.75 12.75 0 0 1-9.05-3.75l-51.2-51.2a12.8 12.8 0 0 1 18.1-18.1l51.2 51.2A12.8 12.8 0 0 1 256 320zM217.6 358.4a12.75 12.75 0 0 1-9-3.75l-51.2-51.2a12.8 12.8 0 1 1 18.1-18.1l51.2 51.2a12.8 12.8 0 0 1-9.05 21.85z"/></svg></a><a href="https://jvaverka.github.io/tag/career/">career</a></div>
+<h1 id="five_years_of_software_development">Five Years of Software Development</h1>
+<div class="franklin-toc"><ol><li>Foot in the Door</li><li>The Beginning</li><li>The Big Show</li><li>Reflection</li></ol></div>
+<h2 id="foot_in_the_door">Foot in the Door</h2>
+<p>January 2016 marked the dawn of a new age. I experienced some difficulty breaking into the job market, but I was steadfast in my pursuit to find a workplace where my education could be put to use. Armed with a math degree and zero technical experience, I somehow landed a job in the IT department of a major automotive OEM. Here I am five years later&#33; So this feels like the perfect time to reflect on my journey so far.</p>
+<h2 id="the_beginning">The Beginning</h2>
+<p>I started in a business intelligence group. My team was assembled to gather, aggregate and report key performance indicators for dealerships across international markets. This role introduced me to some fundamentals, such as managing relational databases, data modeling, ETL &#40;short for Extract / Transform / Load&#41;, and face-to-face interaction with business partners. That last skill being perhaps the most important and would serve me well in the future. However, what I remember most about this role is the team. We were small but ambitious. We moved fast, worked hard, trusted each other and we accomplished our goals.</p>
+<p>Later I worked in a customer relationship management &#40;or CRM&#41; group. The team was tasked to define, test and generate manifests for marketing campaigns across multiple media channels &#40;letter, email, phone&#41;. In this new area, I had to stay up-to-date on all data privacy laws and best practices. Additionally, I improved upon my data management skills such as data cleansing, munging and wrangling. I also got my first taste of Linux, and admittedly, I didn&#39;t see the big deal - that would come later. Personally, I had to learn to operate more like an individual contributor. This was challenging at times, but in the end helped me to become a more independent developer.</p>
+<h2 id="the_big_show">The Big Show</h2>
+<p>After two years I wanted a change. The idea was to combine my newfound technical skills with my interests in mathematics. Not knowing exactly what I was looking for, I began to search throughout the company. Finally, I found the High Performance Compute &#40;HPC&#41; &amp; Open-Source Software Application Development Team. I only knew what a couple of those words meant, but I was excited about the opportunity and I took it&#33;</p>
+<p>The objective - create innovative solutions for Computer Aided Engineering &#40;CAE&#41; using free and open-source software &#40;FOSS&#41;. This grew into many desktop, web, monitoring and service applications. In the end, I was involved in everything from data transfers to data serialization, file management to memory management, workflow curation to job monitoring, user-experience to remote post-processing, and managing business partner coordination to individually leading feature development. I grew a tremendous amount as a developer, leader and person in a short time due to the amazing amount of talent and determination on the team &#40;and a special shout-out to my boss who believes in me and fuels my curiosity&#41;.</p>
+<p>Three plus years on this team gave me skills I never knew existed. It was a long journey. I had to come to work every day ready to learn. Over time and after asking countless questions, I became the one with the answers. Not only that, but I started to take on personal projects to test out newly encountered technology. I was coming into my own personally and professionally.</p>
+<h2 id="reflection">Reflection</h2>
+<p>A lot happened. So what did I learn? I entered the work force a naive young man.  I had a true desire to work hard and improve my company. However, things did not prove to be that simple, and I struggled with some aspects of working in such a large company. Thankfully, I was able to &quot;<em>keep the faith</em>&quot; as my manager would say, and I kept searching for a team where my skills and passions could shine - and one day that is exactly what happened&#33;</p>
+<p>I carved out a home in that crazy big machine. I gave a lot of long hours and hard work, and in return the company helped me grow in unexpected ways. Here I am now, a little less young and naive. As I reflect it&#39;s obvious that my greatest contribution to any of the efforts above was not my knowledge of Calculus, Statistics, or Number Theory. The greatest value I can add comes from my ability and desire to communicate ideas. The ability to communicate and understand complex situations - be it in a dataset or a team dynamic - has helped me succeed in a variety of ways. More importantly, this willingness to listen, and share &#40;usually in that order&#41; has made my team members <em>want</em> to work with me.</p>
+<p>That is the most important thing I could learn in my first five years in software development.  I&#39;m incredibly grateful, and excited to continue my work.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>  
   
@@ -87,6 +246,81 @@
   <description>
     <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="more_goodies">More goodies</h1>
+<div class="franklin-toc"><ol><li>More markdown support</li><li>A bit more highlighting</li><li>More customisation<ol><li>Custom &quot;hfun&quot;</li><li>Custom &quot;lx&quot;</li></ol></li></ol></div>
+<h2 id="more_markdown_support">More markdown support</h2>
+<p>The Julia Markdown parser in Julia&#39;s stdlib is not exactly complete and Franklin strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.</p>
+<ul>
+<li><p>indirect references for instance &#91;like so&#93;</p>
+</li>
+</ul>
+<p> or also for images</p>
+<p>&#33;&#91;&#93;&#91;some image&#93;</p>
+<p>some people find that useful as it allows referring multiple times to the same link for instance.</p><ul>
+<li><p>un-qualified code blocks are allowed and are julia by default, indented code blocks are not supported by default &#40;and there support will disappear completely in later version&#41;</p>
+</li>
+</ul>
+<pre><code class="language-julia">a &#61; 1
+b &#61; a&#43;1</code></pre>
+<p>you can specify the default language with <code>@def lang &#61; &quot;julia&quot;</code>. If you actually want a &quot;plain&quot; code block, qualify it as <code>plaintext</code> like</p>
+<pre><code class="language-plaintext">so this is plain-text stuff.</code></pre>
+<h2 id="a_bit_more_highlighting">A bit more highlighting</h2>
+<p>Extension of highlighting for <code>pkg</code> an <code>shell</code> mode in Julia:</p>
+<pre><code class="language-julia-repl">&#40;v1.4&#41; pkg&gt; add Franklin
+shell&gt; blah
+julia&gt; 1&#43;1
+&#40;Sandbox&#41; pkg&gt; resolve</code></pre>
+<p>you can tune the colouring in the CSS etc via the following classes:</p>
+<ul>
+<li><p><code>.hljs-meta</code> &#40;for <code>julia&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metas</code> &#40;for <code>shell&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metap</code> &#40;for <code>...pkg&gt;</code>&#41;</p>
+</li>
+</ul>
+<h2 id="more_customisation">More customisation</h2>
+<p>Franklin, by design, gives you a lot of flexibility to define how you want stuff be done, this includes doing your own parsing/processing and your own HTML generation using Julia code.</p>
+<p>In order to do this, you can define two types of functions in a <code>utils.jl</code> file which will complement your <code>config.md</code> file:</p>
+<ul>
+<li><p><code>hfun_*</code> allow you to plug custom-generated HTML somewhere</p>
+</li>
+<li><p><code>lx_*</code> allow you to do custom parsing of markdown and generation of HTML</p>
+</li>
+</ul>
+<p>The former &#40;<code>hfun_*</code>&#41; is most likely to be useful.</p>
+<h3 id="custom_hfun">Custom &quot;hfun&quot;</h3>
+<p>If you define a function <code>hfun_bar</code> in the <code>utils.jl</code> then you have access to a new template function <code>&#123;&#123;bar ...&#125;&#125;</code>. The parameters are passed as a list of strings, for instance variable names but it  could just be strings as well.</p>
+<p>For instance:</p>
+<pre><code class="language-julia">function hfun_bar&#40;vname&#41;
+  val &#61; Meta.parse&#40;vname&#91;1&#93;&#41;
+  return round&#40;sqrt&#40;val&#41;, digits&#61;2&#41;
+end</code></pre>.hf {background-color:black;color:white;font-weight:bold;}<p>Can be called with <code>&#123;&#123;bar 4&#125;&#125;</code>: <strong>2.0</strong>.</p>
+<p>Usually you will want to pass variable name &#40;either local or global&#41; and collect their value via one of <code>locvar</code>, <code>globvar</code> or <code>pagevar</code> depending on your use case. Let&#39;s have another toy example:</p>
+<pre><code class="language-julia">function hfun_m1fill&#40;vname&#41;
+  var &#61; vname&#91;1&#93;
+  return pagevar&#40;&quot;menu1&quot;, var&#41;
+end</code></pre>
+<p>Which you can use like this <code>&#123;&#123;m1fill title&#125;&#125;</code>: <strong>Jacob Vaverka</strong>. Of course  in this specific case you could also have used <code>&#123;&#123;fill title menu1&#125;&#125;</code>: </p>
+<p>Of course these examples are not very useful, in practice you might want to use it to generate actual HTML in a specific way using Julia code. For instance you can use it to customise how <a href="https://jvaverka.github.io/menu3/#customising_tag_pages">tag pages look like</a>.</p>
+<p>A nice example of what you can do is in the <a href="https://juliasymbolics.github.io/SymbolicUtils.jl/api/">SymbolicUtils.jl manual</a> where they use a <code>hfun_</code> to generate HTML encapsulating the content of code docstrings, in a way doing something similar to what Documenter does. See <a href="https://github.com/JuliaSymbolics/SymbolicUtils.jl/blob/website/utils.jl">how they defined it</a>.</p>
+<p><strong>Note</strong>: the  output <strong>will not</strong> be reprocessed by Franklin, if you want to generate markdown which should be processed by Franklin, then use <code>return fd2html&#40;markdown, internal&#61;true&#41;</code> at the end.</p>
+<h3 id="custom_lx">Custom &quot;lx&quot;</h3>
+<p>These commands will look the same as latex commands but what they do with their content is now entirely controlled by your code. You can use this to do your own parsing of specific chunks of your content if you so desire.</p>
+<p>The definition of <code>lx_*</code> commands <strong>must</strong> look like this:</p>
+<pre><code class="language-julia">function lx_baz&#40;com, _&#41;
+  # keep this first line
+  brace_content &#61; Franklin.content&#40;com.braces&#91;1&#93;&#41; # input string
+  # do whatever you want here
+  return uppercase&#40;brace_content&#41;
+end</code></pre>
+<p>You can call the above with <code>\baz&#123;some string&#125;</code>: SOME STRING.</p>
+<p><strong>Note</strong>: the output <strong>will be</strong> reprocessed by Franklin, if you want to avoid this, then escape the output by using <code>return &quot;~~~&quot; * s * &quot;~~~&quot;</code> and it will be plugged  in as is in the HTML.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>  
   
@@ -106,6 +340,92 @@
   <description>
     <![CDATA[  This is a RSS test.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="working_with_tags">Working with tags</h1>
+<p><strong>Example</strong>:</p>
+<ul>
+<li><p>page with tag <a href="https://jvaverka.github.io/tag/syntax/"><code>syntax</code></a></p>
+</li>
+<li><p>page with tag <a href="https://jvaverka.github.io/tag/image/"><code>image</code></a></p>
+</li>
+<li><p>page with tag <a href="https://jvaverka.github.io/tag/code/"><code>code</code></a></p>
+</li>
+</ul>
+<div class="franklin-toc"><ol><li>Indicating tags</li><li>Customising tag pages</li><li>Customising tag lists</li></ol></div>
+<h2 id="indicating_tags">Indicating tags</h2>
+<p>To mark a page with tags, add:</p>
+<pre><code class="language-markdown">@def tags &#61; &#91;&quot;tag1&quot;, &quot;tag2&quot;&#93;</code></pre>
+<p>then that page, along with all others that have the tag <code>tag1</code> will be listed at <code>/tag/tag1/</code>.</p>
+<h2 id="customising_tag_pages">Customising tag pages</h2>
+<p>You can change how a <code>/tag/...</code> page looks like by modifying the <code>_layout/tag.html</code>. An important note is that you can <strong>only</strong> use <strong>global</strong> page variables &#40;defined in <code>config.md</code>&#41;.</p>
+<p>There are three &quot;exceptions&quot;:</p>
+<ol>
+<li><p>you can still use <code>&#123;&#123;ispage /tag/tagname/&#125;&#125; ... &#123;&#123;end&#125;&#125;</code> &#40;or <code>&#123;&#123;isnotpage ...&#125;&#125;</code>&#41; to have a different layout depending on the tag,</p>
+</li>
+<li><p>you can use the <code>fd_tag</code> variable which contains the  name of the tag so <code>&#123;&#123;fill fd_tag&#125;&#125;</code> will input the tag string as is,</p>
+</li>
+<li><p>you can use <code>&#123;&#123;fill varname path/to/page&#125;&#125;</code> to exploit a page variable defined in a specific page.</p>
+</li>
+</ol>
+<h2 id="customising_tag_lists">Customising tag lists</h2>
+<p>By default the tag list is very simple: it just collects all pages that match the tags and it shows them in a simple list by anti-chronological order &#40;more recent at the top&#41;.</p>
+<p>You can customise this by defining your own <code>hfun_custom_taglist</code> function in the <code>utils.jl</code> file. The commented blueprint for the simple default setting is below and should give you an idea of how to  write your own generator.</p>
+<p>Assuming you&#39;ve defined such a function, don&#39;t forget to use <code>&#123;&#123;custom_taglist&#125;&#125;</code> in the <code>_layout/tag.html</code> instead of the default <code>&#123;&#123;taglist&#125;&#125;</code>.</p>
+<pre><code class="language-julia">function hfun_custom_taglist&#40;&#41;::String
+    # -----------------------------------------
+    # Part1: Retrieve all pages associated with
+    #  the tag &amp; sort them
+    # -----------------------------------------
+    # retrieve the tag string
+    tag &#61; locvar&#40;:fd_tag&#41;
+    # recover the relative paths to all pages that have that
+    # tag, these are paths like /blog/page1
+    rpaths &#61; globvar&#40;&quot;fd_tag_pages&quot;&#41;&#91;tag&#93;
+    # you might want to sort these pages by chronological order
+    # you could also only show the most recent 5 etc...
+    sorter&#40;p&#41; &#61; begin
+        # retrieve the &quot;date&quot; field of the page if defined, otherwise
+        # use the date of creation of the file
+        pvd &#61; pagevar&#40;p, :date&#41;
+        if isnothing&#40;pvd&#41;
+            return Date&#40;Dates.unix2datetime&#40;stat&#40;p * &quot;.md&quot;&#41;.ctime&#41;&#41;
+        end
+        return pvd
+    end
+    sort&#33;&#40;rpaths, by&#61;sorter, rev&#61;true&#41;    # --------------------------------
+    # Part2: Write the HTML to plug in
+    # --------------------------------
+    # instantiate a buffer in which we will write the HTML
+    # to plug in the tag page
+    c &#61; IOBuffer&#40;&#41;
+    write&#40;c, &quot;...1...&quot;&#41;
+    # go over all paths
+    for rpath in rpaths
+        # recover the url corresponding to the rpath
+        url &#61; get_url&#40;rpath&#41;
+        # recover the title of the page if there is one defined,
+        # if there isn&#39;t, fallback on the path to the page
+        title &#61; pagevar&#40;rpath, &quot;title&quot;&#41;
+        if isnothing&#40;title&#41;
+            title &#61; &quot;/&#36;rpath/&quot;
+        end
+        # write some appropriate HTML
+        write&#40;c, &quot;...2...&quot;&#41;
+    end
+    # finish the HTML
+    write&#40;c, &quot;...3...&quot;&#41;
+    # return the HTML string
+    return String&#40;take&#33;&#40;c&#41;&#41;
+end</code></pre>
+<p>For instance the default uses:</p>
+<pre><code class="language-html">&lt;&#33;-- 1, 3: simple list--&gt;
+&lt;ul&gt;...&lt;/ul&gt;
+&lt;&#33;-- 2: simple list item plugging in path &#43; title --&gt;
+&lt;li&gt;&lt;a href&#61;&quot;/&#36;rpath/&quot;&gt;&#36;title&lt;/a&gt;&lt;/li&gt;</code></pre>
+ ]]>
+  </content:encoded>
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
   
@@ -125,6 +445,70 @@
   <description>
     <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="working_with_code_blocks">Working with code blocks</h1>
+<div class="franklin-toc"><ol><li>Live evaluation of code blocks</li><li>Including scripts</li></ol></div>
+<h2 id="live_evaluation_of_code_blocks">Live evaluation of code blocks</h2>
+<p>If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.</p>
+<p>Indeed, what happens is that the code block gets saved as a script which then gets executed. This also allows for that block to not be re-executed every time you change something <em>else</em> on the page.</p>
+<p>Here&#39;s a simple example &#40;change values in <code>a</code> to see the results being live updated&#41;:</p>
+<pre><code class="language-julia">using LinearAlgebra
+a &#61; &#91;1, 2, 3, 3, 4, 5, 2, 2&#93;
+@show dot&#40;a, a&#41;
+println&#40;dot&#40;a, a&#41;&#41;</code></pre>
+<p>You can now show what this would look like:</p>
+<pre><code class="plaintext code-output">dot(a, a) = 72
+72
+</code></pre>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li><p>you don&#39;t have to specify the <code>.jl</code> &#40;see below&#41;,</p>
+</li>
+<li><p>you do need to explicitly use print statements or <code>@show</code> for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,</p>
+</li>
+<li><p>only Julia code blocks are supported at the moment, there may be a support for scripting languages like <code>R</code> or <code>python</code> in the future,</p>
+</li>
+<li><p>the way you specify the path is important; see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for more info. If you don&#39;t care about how things are structured in your <code>/assets/</code> folder, just use <code>./scriptname.jl</code>. If you want things to be grouped, use <code>./group/scriptname.jl</code>. For more involved uses, see the docs.</p>
+</li>
+</ul>
+<p>Lastly, it&#39;s important to realise that if you don&#39;t change the content of the code, then that code will only be executed <em>once</em> even if you make multiple changes to the text around it.</p>
+<p>Here&#39;s another example,</p>
+<pre><code class="language-julia">for i ∈ 1:5, j ∈ 1:5
+    print&#40;&quot; &quot;, rpad&#40;&quot;*&quot;^i,5&#41;, lpad&#40;&quot;*&quot;^&#40;6-i&#41;,5&#41;, j&#61;&#61;5 ? &quot;\n&quot; : &quot; &quot;^4&#41;
+end</code></pre>
+<p>which gives the &#40;utterly useless&#41;:</p>
+<pre><code class="plaintext code-output"> *    *****     *    *****     *    *****     *    *****     *    *****
+ **    ****     **    ****     **    ****     **    ****     **    ****
+ ***    ***     ***    ***     ***    ***     ***    ***     ***    ***
+ ****    **     ****    **     ****    **     ****    **     ****    **
+ *****    *     *****    *     *****    *     *****    *     *****    *
+</code></pre>
+<p>note the absence of <code>.jl</code>, it&#39;s inferred.</p>
+<p>You can also hide lines &#40;that will be executed nonetheless&#41;:</p>
+<pre><code class="language-julia">using Random
+@show randn&#40;2&#41;</code></pre>
+<pre><code class="plaintext code-output">randn(2) = [0.2972879845354616, 0.3823959677906078]
+</code></pre>
+<h2 id="including_scripts">Including scripts</h2>
+<p>Another approach is to include the content of a script that has already been executed. This can be an alternative to the description above if you&#39;d like to only run the code once because it&#39;s particularly slow or because it&#39;s not Julia code. For this you can use the <code>\input</code> command specifying which language it should be tagged as:</p>
+<p><pre><code class="language-julia">x &#61; randn&#40;5&#41;
+y &#61; randn&#40;5&#41;for i in 1:5
+    println&#40;rpad&#40;&quot;*&quot;^i, 10, &#39;-&#39;&#41;, round&#40;dot&#40;x, y&#41;, digits&#61;1&#41;&#41;
+end</code></pre> </p>
+<p>these scripts can be run in such a way that their output is also saved to file, see <code>scripts/generate_results.jl</code> for instance, and you can then also input the results:</p>
+<p><pre><code class="plaintext code-output">*---------1.3
+**--------1.3
+***-------1.3
+****------1.3
+*****-----1.3
+</code></pre> </p>
+<p>which is convenient if you&#39;re presenting code.</p>
+<p><strong>Note</strong>: paths specification matters, see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for details.</p>
+<p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
   
@@ -144,6 +528,139 @@
   <description>
     <![CDATA[  This is a Franklin Example and RSS test.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  <h1 id="how_to_use_franklin">How to use Franklin</h1>
+<p><div class="franklin-toc"><ol><li>The base with Markdown<ol><li>Symbols and html entities</li></ol></li><li>Basic Franklin extensions<ol><li>Divs</li><li>LaTeX and Maths</li><li>A quick note on whitespaces</li><li>Raw HTML</li></ol></li><li>Pages and structure</li><li>References &#40;not really&#41;</li><li>Header and Footer</li></ol></div> </p>
+<p>This section is meant as a refresher if you&#39;re new to Franklin. Have a look at both how the website renders and the corresponding markdown &#40;<code>index.md</code>&#41;. Modify at will to get a feeling for how things work&#33;</p>
+<p>Ps: if you want to modify the header or footer or the general look of the website, adjust the files in</p>
+<ul>
+<li><p><code>src/_css/</code> and</p>
+</li>
+<li><p><code>src/_html_parts/</code>.</p>
+</li>
+</ul>
+<h2 id="the_base_with_markdown">The base with Markdown</h2>
+<p>The <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">standard markdown syntax</a> can be used such as titles using <code>#</code>, lists:</p>
+<ul>
+<li><p>element with <strong>bold</strong></p>
+</li>
+<li><p>element with <em>emph</em></p>
+</li>
+</ul>
+<p>or code-blocks <code>inline</code> or with highlighting &#40;note the <code>@def hascode &#61; true</code> in the source to allow <a href="https://highlightjs.org/">highlight.js</a> to do its job&#41;:</p>
+<pre><code class="language-julia">abstract type Point end
+struct PointR2&#123;T&lt;:Real&#125; &lt;: Point
+    x::T
+    y::T
+end
+struct PointR3&#123;T&lt;:Real&#125; &lt;: Point
+    x::T
+    y::T
+    z::T
+end
+function len&#40;p::T&#41; where T&lt;:Point
+  sqrt&#40;sum&#40;getfield&#40;p, η&#41;^2 for η ∈ fieldnames&#40;T&#41;&#41;&#41;
+end</code></pre>
+<p>You can also quote stuff</p>
+<blockquote>
+<p>You must have chaos within you to ...</p>
+</blockquote>
+<p>or have tables:</p>
+<table><tr><th align="right">English</th><th align="right">Mandarin</th></tr><tr><td align="right">winnie the pooh</td><td align="right">维尼熊</td></tr></table>
+<p>Note that you may have to do a bit of CSS-styling to get these elements to look the way you want them &#40;the same holds for the whole page in fact&#41;.</p>
+<h3 id="symbols_and_html_entities">Symbols and html entities</h3>
+<p>If you want a dollar sign you have to escape it like so: &#36;, you can also use html entities like so: &rarr; or &pi; or, if you&#39;re using Juno for instance, you can use <code>\pi&#91;TAB&#93;</code> to insert the symbol as is: π &#40;it will be converted to a html entity&#41;.<sup id="fnref:1">[1]</sup></p>
+<p>If you want to show a backslash, just use it like so: &#92; ; if you want to force a line break, use a <code>\\</code> like <br/> so &#40;this is on a new line&#41;.<sup id="fnref:blah">[2]</sup></p>
+<p>If you want to show a backtick, escape it like so: &#96; and if you want to show a tick in inline code use double backticks like <code>so &#96; ...</code>.</p>
+<p>Footnotes are nice too:</p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref">[1]</td>
+        <td class="fndef-content">this is the text for the first footnote, you can style all this looking at <code>.fndef</code> elements; note that the whole footnote definition is <em>expected to be on the same line</em>.</td>
+    </tr>
+</table>
+<table class="fndef" id="fndef:blah">
+    <tr>
+        <td class="fndef-backref">[2]</td>
+        <td class="fndef-content">and this is a longer footnote with some blah from veggie ipsum: turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</td>
+    </tr>
+</table>
+</p>
+<h2 id="basic_franklin_extensions">Basic Franklin extensions</h2>
+<h3 id="divs">Divs</h3>
+<p>It is sometimes useful to have a short way to make a part of the page belong to a div so that it can be styled separately. You can do this easily with Franklin by using <code>@@divname ... @@</code>. For instance, you could want a blue background behind some text.</p>
+<div class="colbox-blue">Here we go&#33; &#40;this is styled in the css sheet with name &quot;colbox-blue&quot;&#41;.</div>
+<p>Since it&#39;s just a <code>&lt;div&gt;</code> block, you can put this construction wherever you like and locally style your text.</p>
+<h3 id="latex_and_maths">LaTeX and Maths</h3>
+<p>Essentially three things are imitated from LaTeX</p>
+<ol>
+<li><p>you can introduce definitions using <code>\newcommand</code></p>
+</li>
+<li><p>you can use hyper-references with <code>\eqref</code>, <code>\cite</code>, ...</p>
+</li>
+<li><p>you can show nice maths &#40;via KaTeX&#41;</p>
+</li>
+</ol>
+<p>The definitions can be introduced in the page or in the <code>config.md</code> &#40;in which case they&#39;re available everywhere as opposed to just in that page&#41;. For instance, the commands <code>\scal</code> and <code>\R</code> are defined in the config file &#40;see <code>src/config.md</code>&#41; and can directly be used whereas the command <code>\E</code> is defined below &#40;and therefore only available on this page&#41;:</p>
+<p>Now we can write something like</p>
+<a id="equation_blah" class="anchor"></a>\[  \varphi(\mathbb E\left[ X\right]) \le \mathbb E\left[ \varphi(X)\right].  \]
+<p>since we&#39;ve given it the label <code>\label&#123;equation blah&#125;</code>, we can refer it like so: <span class="eqref">(1)</span> which can be convenient for pages that are math-heavy.</p>
+<p>In a similar vein you can cite references that would be at the bottom of the page: <span class="bibref">(Noether (1915), Bezanson et al. (2017))</span>.</p>
+<p><strong>Note</strong>: the LaTeX commands you define can also incorporate standard markdown &#40;though not in a math environment&#41; so for instance let&#39;s define a silly <code>\bolditalic</code> command.</p>
+<p>and use it <em><strong>here for example</strong></em>.</p>
+<p>Here&#39;s another quick one, a command to change the color:</p>
+<p>This is <span style="color: blue">in blue</span> or <span style="color: #bf37bc">in #bf37bc</span>.</p>
+<h3 id="a_quick_note_on_whitespaces">A quick note on whitespaces</h3>
+<p>For most commands you will use <code>#k</code> to refer to the \(k\)-th argument as in LaTeX. In order to reduce headaches, this forcibly introduces a whitespace on the left of whatever is inserted which, usually, changes nothing visible &#40;e.g. in a math settings&#41;. However there <em>may be</em> situations where you do not want this to happen and you know that the insertion will not clash with anything else. In that case, you should simply use <code>&#33;#k</code> which will not introduce that whitespace. It&#39;s probably easier to see this in action:</p>
+<ul>
+<li><p>with: <code>/usr/local/bin/ script.jl</code>, there&#39;s a whitespace you don&#39;t want 🚫</p>
+</li>
+<li><p>without: <code>/usr/local/bin/script.jl</code> here there isn&#39;t ✅</p>
+</li>
+</ul>
+<h3 id="raw_html">Raw HTML</h3>
+<p>You can include raw HTML by just surrounding a block with <code>~~~</code>. Not much more to add. This may be useful for local custom layouts like having a photo next to a text in a specific way.</p><div class="row">
+  <div class="container">
+    <img class="left" src="https://jvaverka.github.io/assets/rndimg.jpg">
+    <p>
+    Marine iguanas are truly splendid creatures. They're found on the Gálapagos islands, have skin that basically acts as a solar panel, can swim and may have the ability to adapt their body size depending on whether there's food or not.
+    </p>
+    <p>
+    Evolution is cool.
+    </p>
+    <div style="clear: both"></div>      
+  </div>
+</div><p><strong>Note 1</strong>: again, entire such blocks can be made into latex-like commands via <code>\newcommand&#123;\mynewblock&#125;&#91;1&#93;&#123;...&#125;</code>.</p>
+<p><strong>Note 2</strong>: whatever is in a raw HTML block is <em>not</em> further processed &#40;so you can&#39;t have LaTeX in there for instance&#41;. A partial way around this is to use <code>@@...</code> blocks which <em>will</em> be recursively parsed. The following code gives the same result as above with the small difference that there is LaTeX being processed in the inner div.</p>
+<div class="row"><div class="container"><div class="left"><img src="https://jvaverka.github.io/assets/rndimg.jpg" alt="" /></div></div>
+<p>Marine iguanas are <strong>truly splendid</strong> creatures. They&#39;re not found in equations like \(\exp(-i\pi)+1\). But they&#39;re still quite cool. 
+<div style="clear: both"></div>
+</p></div>
+<h2 id="pages_and_structure">Pages and structure</h2>
+<p>Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. &#40;It&#39;s probably best if you look at the source folder for this&#41;.</p>
+<ul>
+<li><p><a href="https://jvaverka.github.io/menu1/">menu 1</a></p>
+</li>
+<li><p><a href="https://jvaverka.github.io/menu2/">menu 2</a></p>
+</li>
+<li><p><a href="https://jvaverka.github.io/menu3/">menu 3</a></p>
+</li>
+</ul>
+<h2 id="references_not_really">References &#40;not really&#41;</h2>
+<ul>
+<li><p><a id="noether15" class="anchor"></a><strong>Noether</strong>,  Körper und Systeme rationaler Funktionen, 1915.</p>
+</li>
+<li><p><a id="bezanson17" class="anchor"></a><strong>Bezanson</strong>, <strong>Edelman</strong>, <strong>Karpinski</strong> and <strong>Shah</strong>, <a href="https://julialang.org/research/julia-fresh-approach-BEKS.pdf">Julia: a fresh approach to numerical computing</a>, SIAM review 2017.</p>
+</li>
+</ul>
+<h2 id="header_and_footer">Header and Footer</h2>
+<p>As you can see here at the bottom of the page, there is a footer which you may want on all pages but for instance you may want the date of last modification to be displayed. In a fashion heavily inspired by <a href="https://gohugo.io">Hugo</a>, you can write things like</p>
+<pre><code class="language-html">Last modified: &#123;&#123; fill fd_mtime &#125;&#125;.</code></pre>
+<p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>fd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
+<p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>  
   

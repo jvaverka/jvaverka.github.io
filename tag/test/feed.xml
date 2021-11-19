@@ -30,8 +30,39 @@
   <description>
     <![CDATA[  This is a Weave.jl and RSS test.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<!DOCTYPE html>
+<HTML lang = "en"><BODY>
+  <div class ="container">
+    <div class = "row">
+      <div class = "col-md-12 twelve columns">
+        <div class="title">
+          
+          
+          
+        </div>        <h1>Hello World</h1>
+<pre><code class = "language-julia">2 + 2
+</code></pre>
+<pre class="output">
+4
+</code></pre>
+<p>The above was a cell written in Weave&#33; How cool is that?</p>
+        <HR/>
+        <div class="footer">
+          <p>
+            Published from <a href="test.jmd">test.jmd</a>
+            using <a href="http://github.com/JunoLab/Weave.jl">Weave.jl</a> v0.10.10 on 2021-11-19.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BODY></HTML> ]]>
+  </content:encoded>
     
-  <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>  
+  <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
