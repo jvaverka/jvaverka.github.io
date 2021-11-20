@@ -177,7 +177,7 @@ const SVG_TAG = """
 </svg>
 """
 
-Franklin.@delay function hfun_page_tags()
+Franklin.@delay function hfun_notetags()
     pagetags = Franklin.globvar("fd_page_tags")
     pagetags === nothing && return ""
     io = IOBuffer()

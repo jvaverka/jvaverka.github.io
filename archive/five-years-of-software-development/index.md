@@ -6,7 +6,7 @@ hascode = false
 tags = ["career"]
 +++
 
-{{page_tags}}
+{{ notetags }}
 
 # Five Years of Software Development
 
