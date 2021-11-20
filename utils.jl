@@ -3,20 +3,20 @@ using Franklin
 using Weave
 
 function hfun_bar(vname)
-  val = Meta.parse(vname[1])
-  return round(sqrt(val), digits=2)
+    val = Meta.parse(vname[1])
+    return round(sqrt(val), digits=2)
 end
 
 function hfun_m1fill(vname)
-  var = vname[1]
-  return Franklin.pagevar("index", var)
+    var = vname[1]
+    return Franklin.pagevar("index", var)
 end
 
 function lx_baz(com, _)
   # keep this first line
-  brace_content = Franklin.content(com.braces[1]) # input string
+    brace_content = Franklin.content(com.braces[1]) # input string
   # do whatever you want here
-  return uppercase(brace_content)
+    return uppercase(brace_content)
 end
 
 const SVG_LINKEDIN = """
@@ -132,7 +132,7 @@ end
 
 function hfun_weave2html(document)
     f_name = tempname(pwd()) * ".html"
-    weave(first(document), out_path = f_name)
+    weave(first(document), out_path=f_name)
     text = read(f_name, String)
     final =
         "<!DOCTYPE html>\n<HTML lang = \"en\">" * split(text, "</HEAD>")[2] |> # Splits the weave document on the head block
@@ -151,7 +151,7 @@ Franklin.@delay function hfun_notetags()
     io = IOBuffer()
     tags = pagetags[splitext(Franklin.locvar("fd_rpath"))[1]] |> collect |> sort
     write(io, """<div class="tags">$(SVG_TAG)""")
-    for tag in tags[1:end-1]
+    for tag in tags[1:end - 1]
         t = replace(tag, "_" => " ")
         write(io, """<a href="/tag/$tag/">$t</a>, """)
     end
