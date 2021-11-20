@@ -129,6 +129,15 @@ span.note-descr {
   padding: 1em 0.25em;
 }
 
+.social-icon a {
+  color: #004de6;
+  transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+  color: black;
+}
+
 @media (max-width: 1400px) {
   .social-container {
       padding: 0em;
