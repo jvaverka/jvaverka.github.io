@@ -4,7 +4,7 @@ using Weave
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
-    return round(sqrt(val), digits=2)
+    return round(sqrt(val); digits=2)
 end
 
 function hfun_m1fill(vname)
@@ -13,9 +13,9 @@ function hfun_m1fill(vname)
 end
 
 function lx_baz(com, _)
-  # keep this first line
+    # keep this first line
     brace_content = Franklin.content(com.braces[1]) # input string
-  # do whatever you want here
+    # do whatever you want here
     return uppercase(brace_content)
 end
 
@@ -57,13 +57,13 @@ const SVG_TAG = """
 function write_notes(rpaths)::String
     sort_notes!(rpaths)
     curyear = Dates.year(Franklin.pagevar(rpaths[1], :date))
-    c = IOBuffer()
-    write(c, "<h3 class=\"notes\">$curyear</h3>")
-    write(c, "<ul class=\"notes\">")
+    io = IOBuffer()
+    write(io, "<h3 class=\"notes\">$curyear</h3>")
+    write(io, "<ul class=\"notes\">")
     for rp in rpaths
         year = Dates.year(Franklin.pagevar(rp, :date))
         if year < curyear
-            write(c, "<h3 class=\"notes\">$year</h3>")
+            write(io, "<h3 class=\"notes\">$year</h3>")
             curyear = year
         end
         title = Franklin.pagevar(rp, :title)
@@ -71,18 +71,21 @@ function write_notes(rpaths)::String
         descr === nothing && error("no description found on page $rp")
         pubdate = Dates.format(Date(Franklin.pagevar(rp, :date)), "U d")
         path = joinpath(splitpath(rp)[1:2]...)
-        write(c, """
-            <li class="note">
-                <p>
-                    <span class="note">$pubdate</span>
-                    <a href="/$path/">$title</a>
-                    <span class="note-descr tag">$descr</span>
-                </p>
-            </li>
-            """)
+        write(
+            io,
+            """
+      <li class="note">
+          <p>
+              <span class="note">$pubdate</span>
+              <a href="/$path/">$title</a>
+              <span class="note-descr tag">$descr</span>
+          </p>
+      </li>
+      """,
+        )
     end
-    write(c, "</ul>")  #= notes =#
-    return String(take!(c))
+    write(io, "</ul>")  #= notes =#
+    return String(take!(io))
 end
 
 function sort_notes!(rpaths)
@@ -93,11 +96,14 @@ function sort_notes!(rpaths)
         end
         return pvd
     end
-    return sort!(rpaths, by=sorter, rev=true)
+    return sort!(rpaths; by=sorter, rev=true)
 end
 
 function hfun_allnotes()::String
-    rpaths = [joinpath("notes", note, "index.md") for note in readdir("notes") if !endswith(note, ".md")]
+    rpaths = [
+        joinpath("notes", note, "index.md") for
+        note in readdir("notes") if !endswith(note, ".md")
+    ]
     return write_notes(rpaths)
 end
 
@@ -106,19 +112,22 @@ Franklin.@delay function hfun_alltags()
     if tagpages === nothing
         return ""
     end
-    tags = tagpages |> keys |> collect |> sort
+    tags = sort(collect(keys(tagpages)))
     tags_count = [length(tagpages[t]) for t in tags]
     io = IOBuffer()
     write(io, "<div class=\"tag-container\">")
     for (t, c) in zip(tags, tags_count)
-        write(io, """
-            <div class="tag">
-              <nobr>
-              <a class="tag" href="/tag/$t/">$(replace(t, "_" => " "))</a>
-              <span class="tag"> ($c)</span>
-              </nobr>
-            </div>
-            """)
+        write(
+            io,
+            """
+      <div class="tag">
+        <nobr>
+        <a class="tag" href="/tag/$t/">$(replace(t, "_" => " "))</a>
+        <span class="tag"> ($c)</span>
+        </nobr>
+      </div>
+      """,
+        )
     end
     write(io, "</div>")  #= tag-container =#
     return String(take!(io))
@@ -132,15 +141,18 @@ end
 
 function hfun_weave2html(document)
     f_name = tempname(pwd()) * ".html"
-    weave(first(document), out_path=f_name)
+    weave(first(document); out_path=f_name)
     text = read(f_name, String)
-    final =
-        "<!DOCTYPE html>\n<HTML lang = \"en\">" * split(text, "</HEAD>")[2] |> # Splits the weave document on the head block
-        x -> replace(x, r"<span class='hljl-.*?>" => "") |> # Removes weave code block syntax
-        x -> replace(x, "</span>" => "") |> # Removes weave code block syntax
-        x -> replace(x,
-            "<pre class='hljl'>\n" => "<pre><code class = \"language-julia\">", # Replaces weave code block syntax with Franklin's
-        ) |> x -> replace(x, "</pre>" => "</code></pre>") # Replaces weave code block syntax with Franklin's
+    final = x ->
+        replace(x, r"<span class='hljl-.*?>" => "") |> # Removes weave code block syntax
+        x ->
+            replace(x, "</span>" => "") |> # Removes weave code block syntax
+            x ->
+                replace(
+                    x,
+                    "<pre class='hljl'>\n" => "<pre><code class = \"language-julia\">", # Replaces weave code block syntax with Franklin's
+                ) |> x -> replace(x, "</pre>" => "</code></pre>")("<!DOCTYPE html>\n<HTML lang = \"en\">" *
+                                                                  split(text, "</HEAD>")[2]) # Replaces weave code block syntax with Franklin's
     rm(f_name)
     return final
 end
@@ -149,9 +161,9 @@ Franklin.@delay function hfun_notetags()
     pagetags = Franklin.globvar("fd_page_tags")
     pagetags === nothing && return ""
     io = IOBuffer()
-    tags = pagetags[splitext(Franklin.locvar("fd_rpath"))[1]] |> collect |> sort
+    tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
     write(io, """<div class="tags">$(SVG_TAG)""")
-    for tag in tags[1:end - 1]
+    for tag in tags[1:(end - 1)]
         t = replace(tag, "_" => " ")
         write(io, """<a href="/tag/$tag/">$t</a>, """)
     end
@@ -163,24 +175,27 @@ end
 
 function hfun_socialicons()
     io = IOBuffer()
-    write(io, """
-        <div class="social-container">
-            <div class="social-icon">
-                <a href="https://github.com/jvaverka" title="github">
-                    $(SVG_GITHUB)
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="linkedin">
-                    $(SVG_LINKEDIN)
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://gitlab.com/jvaverka" title="gitlab">
-                    $(SVG_GITLAB )
-                </a>
-            </div>
+    write(
+        io,
+        """
+    <div class="social-container">
+        <div class="social-icon">
+            <a href="https://github.com/jvaverka" title="github">
+                $(SVG_GITHUB)
+            </a>
         </div>
-    """)
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="linkedin">
+                $(SVG_LINKEDIN)
+            </a>
+        </div>
+        <div class="social-icon">
+            <a href="https://gitlab.com/jvaverka" title="gitlab">
+                $(SVG_GITLAB )
+            </a>
+        </div>
+    </div>
+""",
+    )
     return String(take!(io))
 end
