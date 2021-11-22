@@ -7,7 +7,7 @@
 # Welcome
 
 This is my personal collection of notes and projects spanning mathematics,
-technology, and other topics. RSS feed coming soon.
+technology, and other topics.
 
 {{ socialicons }}
 

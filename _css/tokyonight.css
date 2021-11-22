@@ -1,0 +1,118 @@
+/*
+
+Tokyonight style (storm)
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  /*padding: 0.5em;*/
+  background: #1D202F;
+}
+
+.hljs,
+.hljs-subst {
+  color: #c0caf5;
+}
+
+/* Tokyonight Red */
+.hljs-deletion,
+.hljs-formula,
+.hljs-keyword,
+.hljs-link,
+.hljs-selector-tag {
+  color: #f7768e;
+}
+
+/* Tokyonight Blue */
+.hljs-built_in,
+.hljs-emphasis,
+.hljs-name,
+.hljs-quote,
+.hljs-strong,
+.hljs-title,
+.hljs-variable {
+  color: #7aa2f7;
+}
+
+/* Tokyonight Yellow */
+.hljs-attr,
+.hljs-params,
+.hljs-template-tag,
+.hljs-type {
+  color: #e0af68;
+}
+
+/* Tokyonight Purple */
+.hljs-builtin-name,
+.hljs-doctag,
+.hljs-literal,
+.hljs-number {
+  color: #bb9af7;
+}
+
+/* Tokyonight Orange */
+.hljs-code,
+.hljs-meta,
+.hljs-regexp,
+.hljs-selector-id,
+.hljs-template-variable {
+  color: #ff9e64;
+}
+
+/* Tokyonight Green */
+.hljs-addition,
+.hljs-meta-string,
+.hljs-section,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-string,
+.hljs-symbol {
+  color: #9ece6a;
+}
+
+/* Tokyonight Cyan */
+.hljs-attribute,
+.hljs-bullet,
+.hljs-class,
+.hljs-function,
+.hljs-function .hljs-keyword,
+.hljs-meta-keyword,
+.hljs-selector-pseudo,
+.hljs-tag {
+  color: #7dcfff;
+}
+
+/* Tokyonight Gray */
+.hljs-comment {
+  color: #928374;
+}
+
+/* Tokyonight Purple */
+.hljs-link_label,
+.hljs-literal,
+.hljs-number {
+  color: #d3869b;
+}
+
+.hljs-comment,
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-section,
+.hljs-strong,
+.hljs-tag {
+  font-weight: bold;
+}
+
+/*
+
+Some modifications taken from github.css
+
+*/
+.hljs-title, .hljs-class {
+    /*color: #900;*/
+    font-weight: 700;
+}

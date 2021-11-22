@@ -15,7 +15,7 @@
 ================================================================== */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: InterUI;
   font-size: var(--normal);
   color: var(--text-color);
 }
@@ -61,7 +61,7 @@ html {
 
 .page-foot {
   font-size: 80%;
-  font-family: Arial, serif;
+  font-family: InterUI;
   color: #a6a2a0;
   text-align: center;
   margin-top: 6em;
@@ -285,6 +285,7 @@ code {
   padding: 0.1em 0.2em;
   border-radius: 2px;
   font-size: var(--small);
+  font-family: JuliaMono;
 }
 
 /* .franklin-content code { */
@@ -316,6 +317,7 @@ code {
 .code-output {
   background: var(--output-background);
   border: 1px dashed #dbdbdb;
+  font-family: JuliaMono;
 }
 
 /* ==================================================================

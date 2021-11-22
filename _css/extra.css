@@ -143,3 +143,86 @@ span.note-descr {
       padding: 0em;
     }
 }
+
+/* ==================================================================
+    Fonts
+================================================================== */
+
+@font-face {
+  font-family: InterUI;
+  font-style:normal;
+  font-display:auto;
+  font-weight:400;
+  src:url(../assets/fonts/Inter-UI-Regular.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-Regular.woff) format("woff")
+}
+@font-face {
+  font-family: InterUI;
+  font-style:italic;
+  font-display:auto;
+  font-weight:400;
+  src:url(../assets/fonts/Inter-UI-Italic.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-Italic.woff) format("woff")
+}
+@font-face {
+  font-family: InterUI;
+  font-style:normal;
+  font-display:auto;
+  font-weight:600;
+  src:url(../assets/fonts/Inter-UI-Medium.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-Medium.woff) format("woff")
+}
+@font-face {
+  font-family: InterUI;
+  font-style:italic;
+  font-display:auto;
+  font-weight:600;
+  src:url(../assets/fonts/Inter-UI-MediumItalic.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-MediumItalic.woff) format("woff")
+}
+@font-face {
+  font-family: InterUI;
+  font-style:normal;
+  font-display:auto;
+  font-weight:800;
+  src:url(../assets/fonts/Inter-UI-Bold.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-Bold.woff) format("woff")
+}
+@font-face {
+  font-family: InterUI;
+  font-style:italic;
+  font-display:auto;
+  font-weight:800;
+  src:url(../assets/fonts/Inter-UI-BoldItalic.woff2) format("woff2"),
+  url(../assets/fonts/Inter-UI-BoldItalic.woff) format("woff")
+}
+
+@font-face {
+  font-family: JuliaMono;
+  src: url("../assets/fonts/JuliaMono-RegularLatin.woff2") format("woff2");
+  font-display: auto;
+  font-weight: 400;
+  unicode-range: U+00-7F; /* Basic Latin characters */
+}
+
+@font-face {
+  font-family: JuliaMono;
+  src: url("../assets/fonts/JuliaMono-BoldLatin.woff2") format("woff2");
+  font-display: auto;
+  font-weight: 700;
+  unicode-range: U+00-7F; /* Basic Latin characters */
+}
+
+@font-face {
+  font-family: JuliaMono;
+  src: url("../assets/fonts/JuliaMono-Regular.woff2") format("woff2");
+  font-display: auto;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  src: url("../assets/fonts/JuliaMono-Bold.woff2") format("woff2");
+  font-display: auto;
+  font-weight: 700;
+}
