@@ -1,5 +1,6 @@
 @def title = "Franklin Example"
 @def descr = "here is a detailed description"
+@def rss = "This is a Franklin Example and RSS test."
 @def date = Date(2018, 3, 22)
 @def tags = ["syntax", "code", "free"]
 

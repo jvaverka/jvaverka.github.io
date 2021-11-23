@@ -1,6 +1,7 @@
 +++
 title = "Working with Tags"
-descr = ""
+descr = "This is how you work with tags."
+rss = "This is a RSS test."
 date = Date(2019, 3, 22)
 tags = ["syntax", "code", "free"]
 +++
