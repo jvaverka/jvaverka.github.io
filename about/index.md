@@ -19,4 +19,8 @@ title = "About | Jacob Vaverka"
 I enjoy coding in Julia because I find it easy to clearly express my ideas as
 code. I enjoy it so much, I even wrote this website in Julia!
 
+If you believe you see an error, please create an
+[issue](https://github.com/jvaverka/jvaverka.github.io/issues/new)
+so I can correct it.
+
 @@ <!-- bio -->

@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ if hasmath }} {{ insert head_katex.html }} {{ end }}
   {{ if hascode }} {{ insert head_highlight.html }} {{ end }}
-  <link rel="stylesheet" href="/css/franklin.css">
-  <link rel="stylesheet" href="/css/basic.css">
-  <link rel="stylesheet" href="/css/extra.css">
+  <link rel="stylesheet" href="/css/frank.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="/assets/favicon.png">
   {{ isdef title }} <title>{{ fill title }}</title> {{ end }}
 </head>
 <body>
-    {{ insert header.html }}
+    {{ ispage /index.md }}{{ insert cover.html }} {{ end }}
+    {{ isnotpage /index.md }}{{ insert header.html }} {{ end }}
 <!-- Content appended here -->

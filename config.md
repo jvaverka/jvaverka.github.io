@@ -5,7 +5,7 @@ mintoclevel = 2
 ignore = ["node_modules/", "archive/"]
 generate_rss = true
 website_title = title
-website_descr = "A collection of notes about math, code, and more."
+website_descr = "Where I write about math, code, and more."
 website_url   = "https://jvaverka.github.io"
 rss_full_content = true
 +++

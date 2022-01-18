@@ -1,16 +1,9 @@
-@@cover-container
+@@cover
 
-@@cover-mug ![](/assets/cover/pp.jpeg)@@
+![](/assets/cover/me.jpeg)
 
-@@cover-lead,lead
-
-# Welcome
-
-This is my personal collection of notes and projects spanning mathematics,
-technology, and other topics.
+# Jacob Vaverka
 
 {{ socialicons }}
 
-@@ <!-- cover-lead -->
-
-@@ <!-- cover-container -->
+@@ <!-- cover -->
