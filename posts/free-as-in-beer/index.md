@@ -82,7 +82,7 @@ They are plentiful.
 Congratulations for making it to the good news (we're almost done here). In
 keeping with the theme, here is another obscure quote.
 
-> To like only for some future goal is shallow. It's the sides of the mountain
+> To live only for some future goal is shallow. It's the sides of the mountain
 > which sustain life, not the top. Here's where things grow.[^zen]
 
 Diving into the unknown and keeping an open mind will reveal many treasures. So
