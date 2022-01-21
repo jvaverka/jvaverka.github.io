@@ -1,7 +1,7 @@
 +++
 title = "Free As In Beer"
-descr = "My take on Free and Libre Open Source Software and who it can benefit."
-rss = "My take on Free and Libre Open Source Software and who it can benefit."
+descr = "My take on Linux and who it's for."
+rss = "My take on Linux and who it's for."
 date = Date(2022, 1, 16)
 hascode = true
 tags = ["life", "linux"]
@@ -12,6 +12,12 @@ tags = ["life", "linux"]
 ## Free As In Beer
 
 \toc
+
+### Free Beer?
+
+Things can be free, as in beer[^free], as in costs no money. Or things can be
+free, as in speech, as in do whatever you want just leave me out of it. Linux
+is the shining example of both.
 
 ### GNU / Linux
 
@@ -100,7 +106,7 @@ There's too many to count, but here are some things I appreciate:
 - :blue_heart: Options ⇒ for those who want better
 - :blue_heart: Freedom (as in speech) ⇒ customize everything[^de]
 
-#### Perfect For You
+#### Perfect Fit
 
 Every person has different need, use-case, aesthetic, etc. It follows that
 every person has a different _perfect_ computer setup. Just like how the world
@@ -108,8 +114,9 @@ is not black and white, not everyone can be fully described in one of two
 buckets.[^os]
 
 There is a richness in diversity in Linux. Users have a choice of
-[distribution](https://en.wikipedia.org/wiki/Linux_distribution) suited for particular purposes and tastes (maybe too
-many choices so just pick [Ubuntu](https://ubuntu.com/) to start then
+[distribution](https://en.wikipedia.org/wiki/Linux_distribution) suited for
+particular purposes and tastes (maybe too many choices so just pick
+[Ubuntu](https://ubuntu.com/) to start then
 [hop](https://embeddedinventor.com/distro-hopping-what-why-how-explained/) to
 your desire). Users have a choice of [desktop
 environment](https://itsfoss.com/what-is-desktop-environment/) that will help
@@ -121,11 +128,11 @@ the time they choose invest.
 
 ![opinion](./opinion.jpg)
 
-Things can be free, as in beer[^free], as in costs no money. Or things can be
-free, as in speech, as in do whatever you want just leave me out of it. There's
-many cases of both throughout Linux and the wider Open-source community.
+Good software exists. Some of it's free-as-in-beer, some of it's
+free-as-in-speech. There's many cases of both throughout Linux and the wider
+Open-source community. Best part - it's for everybody!
 
-Sound good? Remember, you are not alone. There is a strong community of Linux
+Remember, you are not alone. There is a strong community of Linux
 enthusiasts in the world who are willing and able to help you get started.
 Anyone can do this and there is nothing to lose.
 
@@ -135,6 +142,7 @@ Share this with a curious soul or anyone asking about Linux.
 
 ### References
 
+[^free]: [Gratis versus libre](https://en.wikipedia.org/wiki/Gratis_versus_libre)
 [^linux]: [Jamie Zawinski](https://www.brainyquote.com/quotes/jamie_zawinski_320496)
 [^but]: See the [Good News](/posts/free-as-in-beer#good_news)
 [^term]: You learn to love them. As I write this there are 8 on my system.
@@ -142,5 +150,4 @@ Share this with a curious soul or anyone asking about Linux.
 [^zen]: From [Zen and the Art of Motorcycle Maintenance](https://www.goodreads.com/book/show/629.Zen_and_the_Art_of_Motorcycle_Maintenance)
 [^cli]: [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
 [^de]: [Desktop Environments](https://itsfoss.com/best-linux-desktop-environments/)
-[^free]: [Gratis versus libre](https://en.wikipedia.org/wiki/Gratis_versus_libre)
 [^os]: [Global Desktop Operating System Market Share](https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-202012-202112)
