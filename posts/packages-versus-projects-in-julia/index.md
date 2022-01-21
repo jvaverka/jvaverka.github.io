@@ -1,7 +1,7 @@
 +++
 title = "Packages Versus Projects in Julia"
-descr = "In the Julia ecosystem, there is a rather important distinction between Packages & Projects. Here I discuss when and how to use each."
-rss = "In the Julia ecosystem, there is a rather important distinction between Packages & Projects. Here I discuss when and how to use each."
+descr = "The Julia ecosystem has Packages & Projects. This short guide attempts to help beginners get started with both."
+rss = "The Julia ecosystem has Packages & Projects. This short guide attempts to help beginners get started with both."
 date = Date(2022, 1, 22)
 hascode = true
 tags = ["julia", "code"]
@@ -12,6 +12,8 @@ tags = ["julia", "code"]
 ## Packages Versus Projects in Julia
 
 \toc
+
+### Pkg.jl
 
 One of Julia's greatest strengths is its package manager, `Pkg.jl`. My goal
 here is to give new Julia users some helpful tips to get the most out of
@@ -40,6 +42,10 @@ deliver comics to you. The beautiful thing is, that it does so by using
 Packages are the building blocks of the Julia ecosystem. There are many great
 packages out there, and the ease of creating, distributing, and composing
 packages allows the ecosystem to rapidly grow.
+
+Those interested in building and sharing their own Julia package should
+leverage [PkgTemplates.jl](https://invenia.github.io/PkgTemplates.jl/stable/)
+to save time and minimize common mistakes.
 
 ### What is a Project?
 
