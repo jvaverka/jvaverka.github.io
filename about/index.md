@@ -21,7 +21,7 @@ All content on this website is licensed under the [Creative Commons Attribution
 unless otherwise stated.
 
 All code snippets on this website is licensed under the [MIT
-License](https://choosealicense.com/licenses/mit/), unless otherwise stated.
+License](https://mit-license.org/), unless otherwise stated.
 
 The website is built using the static site generator
 [`Franklin.jl`](https://franklinjl.org/) ([MIT
