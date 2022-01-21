@@ -4,23 +4,37 @@ title = "About | Jacob Vaverka"
 
 @@bio
 
-## Bio
+## About
 
-:wave: :earth_africa: I am a
+This is my personal website containing notes on life, math, and tech.
 
-- :dart: sales engineer at Julia Computing
-- :rocket: open-source software developer
-- :school_satchel: student of applied mathematics
-- :books: reader of sci-fi & non-fiction
-- :trophy: runner & yogi
-
-## Julia
-
-I enjoy coding in Julia because I find it easy to clearly express my ideas as
-code. I enjoy it so much, I even wrote this website in Julia!
+### Corrections
 
 If you believe you see an error, please create an
 [issue](https://github.com/jvaverka/jvaverka.github.io/issues/new)
 so I can correct it.
+
+### License
+
+All content on this website is licensed under the [Creative Commons Attribution
+4.0 International License](https://creativecommons.org/licenses/by/4.0/),
+unless otherwise stated.
+
+All code snippets on this website is licensed under the [MIT
+License](https://choosealicense.com/licenses/mit/), unless otherwise stated.
+
+The website is built using the static site generator
+[`Franklin.jl`](https://franklinjl.org/) ([MIT
+License](https://github.com/tlienart/Franklin.jl/blob/master/LICENSE.md)).
+
+The color palette and theme for this website is derived from
+[`tokyonight.nvim`](https://github.com/folke/tokyonight.nvim) ([MIT
+License](https://github.com/folke/tokyonight.nvim/blob/main/LICENSE)).
+
+### Privacy Policy
+
+No data is collected from visitors to this website. The website is hosted on
+GitHub Pages. GitHub's privacy policy is available
+[here](https://help.github.com/en/github/site-policy/github-privacy-statement).
 
 @@ <!-- bio -->
