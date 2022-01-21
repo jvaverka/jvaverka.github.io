@@ -6,10 +6,11 @@
   --small:            14px;
   --medium:           16px;
   --normal:           20px;
+  /* Tokyonight begin */
   --color-background: #24283b;
   --color-foreground: #c0caf5;
   --color-alt-text:   #a9b1d6;
-  --color-black:      #1D202F;
+  --color-black:      #1d202f;
   --color-red:        #f7768e;
   --color-green:      #9ece6a;
   --color-yellow:     #e0af68;
@@ -19,6 +20,55 @@
   --color-grey-light: #a9b1d6;
   --color-grey-dark:  #414868;
   --color-orange:     #ff9e64;
+  /* Tokyonight end */
+
+  /* Nord begin */
+  /* --color-background: #3B4252; */
+  /* --color-foreground: #ECEFF4; */
+  /* --color-alt-text:   #D8DEE9; */
+  /* --color-black:      #2E3440; */
+  /* --color-red:        #BF616A; */
+  /* --color-green:      #8FBCBB; */
+  /* --color-yellow:     #EBCB8B; */
+  /* --color-blue:       #81A1C1; */
+  /* --color-purple:     #B48EAD; */
+  /* --color-cyan:       #88C0D0; */
+  /* --color-grey-light: #4C566A; */
+  /* --color-grey-dark:  #434C5E; */
+  /* --color-orange:     #D08770; */
+  /* Nord end */
+
+  /* Mac Dark begin */
+  /* --color-background: rgb(22, 22, 24); */
+  /* --color-foreground: rgb(255, 255, 255); */
+  /* --color-alt-text:   rgb(129, 129, 129); */
+  /* --color-black:      rgb(0, 0, 0); */
+  /* --color-red:        rgb(255, 65, 54); */
+  /* --color-green:      rgb(49, 222, 75); */
+  /* --color-yellow:     rgb(255, 212, 38); */
+  /* --color-blue:       rgb(64, 156, 255); */
+  /* --color-purple:     rgb(218, 143, 255); */
+  /* --color-cyan:       rgb(112, 215, 255); */
+  /* --color-grey-light: rgb(152, 152, 157); */
+  /* --color-grey-dark:  rgb(97, 97, 101); */
+  /* --color-orange:     rgb(255, 179, 64); */
+  /* Mac Dark end */
+
+  /* Color Blind begin */
+  /* --color-background: rgb(97, 97, 101); */
+  /* --color-foreground: rgb(245, 245, 245); */
+  /* --color-alt-text:   #44aa99; */
+  /* --color-black:      #000; */
+  /* --color-red:        #882255; */
+  /* --color-green:      #117733; */
+  /* --color-yellow:     #ddcc77; */
+  /* --color-blue:       #332288; */
+  /* --color-purple:     #aa4499; */
+  /* --color-cyan:       #88ccee; */
+  /* --color-grey-light: rgb(152, 152, 157); */
+  /* --color-grey-dark:  rgb(97, 97, 101); */
+  /* --color-orange:     #cc6677; */
+  /* Color Blind end */
 }
 
 /* ==================================================================
