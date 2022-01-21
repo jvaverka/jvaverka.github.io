@@ -1,8 +1,8 @@
 +++
 title = "Packages Versus Projects in Julia"
-descr = "The distinction between Packages and Projects in the Julia development environment and how to get started with each."
-rss = "The distinction between packages and projects in the Julia development environment and how to get started with each."
-date = Date(2022, 1, 18)
+descr = "In the Julia ecosystem, there is a rather important distinction between Packages & Projects. Here I discuss their different characteristics and uses."
+rss = "In the Julia ecosystem, there is a rather important distinction between Packages & Projects. Here I discuss their different characteristics and uses."
+date = Date(2022, 1, 22)
 hascode = true
 tags = ["julia", "code"]
 +++
@@ -10,9 +10,6 @@ tags = ["julia", "code"]
 {{ posttags }}
 
 ## Packages Versus Projects in Julia
-
-In the Julia ecosystem, there is a rather important distinction between
-Packages & Projects. Here I discuss their different characteristics and uses.
 
 \toc
 
