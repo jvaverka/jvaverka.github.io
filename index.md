@@ -1,6 +1,6 @@
 @@cover
 
-![](/assets/cover/me.jpeg)
+![](/assets/cover/bulb.png)
 
 # Jacob Vaverka
 
