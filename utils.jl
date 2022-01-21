@@ -19,6 +19,13 @@ function lx_baz(com, _)
     return uppercase(brace_content)
 end
 
+function hfun_eval(arg)
+    x = Core.eval(Franklin, Meta.parse(join(arg)))
+    io = IOBuffer()
+    show(io, "text/plain", x)
+    return String(take!(io))
+end
+
 function write_posts(rpaths)::String
     sort_posts!(rpaths)
     curyear = Dates.year(Franklin.pagevar(rpaths[1], :date))
@@ -204,11 +211,11 @@ function newpost(;title::String, descr::String, tags::Vector{String}, code=false
 
         {{ posttags }}
 
-        # $title
+        ## $title
 
         \\toc
 
-        ## Subtitle
+        ### Subtitle
         """)
     end
 end

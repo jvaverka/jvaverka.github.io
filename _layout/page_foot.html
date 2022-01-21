@@ -1,7 +1,13 @@
 {{ isnotpage /index.md }}
 <div class="page-foot">
   <div class="copyright">
-    &copy; {{ fill author }}. {{isnotpage /tag/*}}Last modified: {{ fill fd_mtime }}.{{end}} Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    <!-- &copy; {{ fill author }}. {{ isnotpage /tag/* }}Last modified: {{ fill fd_mtime }}.{{end}} Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. -->
+    <span>&copy; {{ eval year(today()) }} <a href="/">{{ fill author }}</a> | </span>
+    <span><a rel="license" href="/about/#license">License</a> | </span>
+    <span><a href="/about/#privacy_policy">Privacy Policy</a></span>
+  </div>
+  <div class="copyright">
+    <span>Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>
   </div>
 </div>
 {{ end }}
