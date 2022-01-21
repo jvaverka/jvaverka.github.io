@@ -76,12 +76,11 @@ exploring :pray:
 In case you are interested in learning more about the Julia Programming Language
 or Applied Linear Algebra, here are some resources that helped me on my journey.
 
-### Julia
+### Julia Programming Language
 
 Instructions for joining the many community channels can be found on the
 [community](https://julialang.org/community/) page of the official [Julia
 Lang](https://julialang.org/) website.
-
 
 Wondering if Julia is a good choice for you and your projects? Start by reading
 [What Julia Aims to Accomplish](https://juliadatascience.io/julia_accomplish).
