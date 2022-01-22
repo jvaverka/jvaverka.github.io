@@ -167,11 +167,6 @@ function hfun_socialicons()
         </a>
     </div>
     <div class="social-icon">
-        <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="LinkedIn">
-            <i class="fa fa-linkedin"></i>
-        </a>
-    </div>
-    <div class="social-icon">
         <a href="https://github.com/jvaverka" title="GitHub">
             <i class="fa fa-github"></i>
         </a>
@@ -179,6 +174,11 @@ function hfun_socialicons()
     <div class="social-icon">
         <a href="https://gitlab.com/jvaverka" title="GitLab">
             <i class="fa fa-gitlab" aria-hidden="false"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="LinkedIn">
+            <i class="fa fa-linkedin"></i>
         </a>
     </div>
 </div>
