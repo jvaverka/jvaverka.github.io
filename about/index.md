@@ -2,7 +2,7 @@
 title = "About | Jacob Vaverka"
 +++
 
-@@bio
+@@about
 
 ## About
 
@@ -37,4 +37,4 @@ No data is collected from visitors to this website. The website is hosted on
 GitHub Pages. GitHub's privacy policy is available
 [here](https://help.github.com/en/github/site-policy/github-privacy-statement).
 
-@@ <!-- bio -->
+@@ <!-- about -->

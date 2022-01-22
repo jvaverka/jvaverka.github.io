@@ -10,11 +10,10 @@
 <body>
   {{insert header.html}}
   <div class="franklin-content">
-    <h2 class="posts">
-      Tag ⇒
-        <span style="color:var(--color-yellow)">{{fill fd_tag}}</span>
-    </h2>
-    {{taglist}}
+    <div class="posts">
+      <h2>Tag ⇒ <span style="color:var(--color-yellow)">{{fill fd_tag}}</span></h2>
+      {{taglist}}
+    </div>
     {{insert page_foot.html}}
   </div>
 </body>

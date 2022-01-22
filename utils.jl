@@ -150,38 +150,38 @@ function hfun_socialicons()
     write(
         io,
         """
-    <div class="social-container">
-        <div class="social-icon">
-            <a href="/posts/" title="blog">
-                <i class="fa fa-pencil"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="/about/" title="about">
-                <i class="fa fa-user-circle-o"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="/feed.xml" title="rss">
-                <i class="fa fa-rss"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="linkedin">
-                <i class="fa fa-linkedin"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="https://github.com/jvaverka" title="github">
-                <i class="fa fa-github"></i>
-            </a>
-        </div>
-        <div class="social-icon">
-            <a href="https://gitlab.com/jvaverka" title="gitlab">
-                <i class="fa fa-gitlab" aria-hidden="false"></i>
-            </a>
-        </div>
+<div class="social-container">
+    <div class="social-icon">
+        <a href="/posts/" title="blog">
+            <i class="fa fa-pencil"></i>
+        </a>
     </div>
+    <div class="social-icon">
+        <a href="/about/" title="about">
+            <i class="fa fa-user-circle-o"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="/feed.xml" title="rss">
+            <i class="fa fa-rss"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="linkedin">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://github.com/jvaverka" title="github">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://gitlab.com/jvaverka" title="gitlab">
+            <i class="fa fa-gitlab" aria-hidden="false"></i>
+        </a>
+    </div>
+</div>
 """,
     )
     return String(take!(io))

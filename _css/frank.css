@@ -131,9 +131,11 @@ html {
   justify-content: center;
   margin-top: 6em;
   border-top: 1px solid var(--color-grey-dark);
+  opacity: .8;
   padding-top: 2em;
   margin-bottom: 4em;
-  opacity: .8;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
 }
 
 .copyright {
@@ -690,10 +692,6 @@ instead, display a burger menu.
   nav:active ul {
     display: none;
     position: absolute;
-
-    /* padding: 20px; */
-    /* background: #fff; */
-    /* border: 1px solid #444; */
     right: 30px;
     top: 90px;
     width: 30%;
@@ -753,21 +751,21 @@ table tbody tr td {
     Cover
 ================================================================== */
 
-.cover p {
-  margin: 0em;
-  text-align: center;
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  line-height: 1.35em;
 }
 
 .cover img {
-  /* width: 350px; */
-  /* min-width: 250px; */
+  display: block;
+  margin: 0 auto;
   max-width: 240px;
   border-radius: 50%;
-  padding: 0;
-  margin-top: 15%;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  vertical-align: middle;
 }
 
 .cover h1 {
@@ -792,7 +790,6 @@ table tbody tr td {
     max-width: 150px;
     margin-top: 0;
   }
-
   .cover h1 {
     font-size: 45px;
     margin-bottom: revert;
@@ -804,13 +801,13 @@ table tbody tr td {
     Posts
 ================================================================== */
 
-ul.posts {
-  list-style: none;
-  padding-left: 0;
-}
-
 .posts h2 {
   border-bottom: hidden;
+}
+
+.posts ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .posts a {
@@ -836,18 +833,18 @@ span.post-descr {
 }
 
 /* ==================================================================
-    Bio
+    About
 ================================================================== */
 
-.bio {
+.about {
   max-width: 54em;
 }
 
-.bio h2 {
+.about h2 {
   border-bottom: hidden;
 }
 
-.bio ul {
+.about ul {
   list-style: none;
 }
 
@@ -906,7 +903,12 @@ span.post-descr {
 }
 
 .social-icon a {
+  color: var(--color-cyan);
   transition: color 0.5s ease;
+}
+
+.social-icon a:hover {
+  color: var(--color-yellow);
 }
 
 @media (max-width: 900px) {

@@ -4,9 +4,11 @@ title = "Blog | Jacob Vaverka"
 
 @@posts
 
-## Posts
+## Tags
 
 {{ alltags }}
+
+## Posts
 
 {{ allposts }}
 
