@@ -606,6 +606,11 @@ header .blog-name a {
   font-size: x-large;
   color: var(--color-grey-light);
   text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+header .blog-name a:hover {
+  color: var(--color-yellow);
 }
 
 header li a:hover {
@@ -626,7 +631,7 @@ header li a:hover {
     padding-right: 6%;
   }
   header .blog-name a {
-    font-size: var(--normal);
+    font-size: x-large;
   }
 }
 
@@ -636,7 +641,7 @@ header li a:hover {
     padding-right: 12.5%;
   }
   header .blog-name a {
-    font-size: var(--normal);
+    font-size: xx-large;
   }
 }
 
@@ -648,7 +653,7 @@ header li a:hover {
     margin-right: auto;
   }
   header .blog-name a {
-    font-size: x-large;
+    font-size: xx-large;
   }
 }
 
