@@ -80,6 +80,7 @@ html {
   font-size: var(--normal);
   color: var(--color-foreground);
   background-color: var(--color-background);
+  scroll-behavior: smooth;
 }
 
 /* ==================================================================
@@ -114,6 +115,11 @@ html {
 /* ==================================================================
     FOOT / COPYRIGHT
 ================================================================== */
+
+.back-to-top {
+  float: right;
+  font-size: x-large;
+}
 
 .franklin-content .page-foot a {
   text-decoration: none;
