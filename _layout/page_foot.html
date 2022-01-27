@@ -1,8 +1,10 @@
 {{ isnotpage /index.md }}
   {{ ispage /posts/* }}
-  <div class="back-to-top">
-    <span><a href="#" title="Back to Top"><i class="fa fa-chevron-up"></i></a></span>
-  </div>
+    {{ isnotpage /posts/index.md }}
+      <div class="back-to-top">
+        <span><a href="#" title="Back to Top"><i class="fa fa-chevron-up"></i></a></span>
+      </div>
+    {{ end }}
   {{ end }}
   <div class="page-foot">
     <div class="copyright">

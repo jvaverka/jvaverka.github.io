@@ -118,13 +118,16 @@ html {
 
 .back-to-top {
   float: right;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .franklin-content .page-foot a {
   text-decoration: none;
   color: var(--color-cyan);
-  /* text-decoration: underline; */
+}
+
+.page-foot .copyright a:hover {
+  text-decoration: none;
 }
 
 .page-foot {
@@ -577,7 +580,7 @@ nav li {
 nav li a {
   color: var(--color-cyan);
   text-decoration: none;
-  font-size: larger;
+  font-size: x-large;
   font-weight: bold;
   display: inline-block;
   /* float: center; */
@@ -603,13 +606,13 @@ header .blog-name {
   width: 55%;
   display: inline-block;
   text-align: left;
-  font-size: x-large;
+  font-size: xx-large;
   font-family: JuliaMono;
   padding-top: 10px;
 }
 
 header .blog-name a {
-  font-size: x-large;
+  font-size: xx-large;
   color: var(--color-grey-light);
   text-decoration: none;
   transition: color 0.5s ease;
@@ -626,7 +629,7 @@ header li a:hover {
 
 #menu-icon {
   display: none;
-  font-size: x-large;
+  font-size: xx-large;
   color: var(--color-alt-text);
 }
 
@@ -636,9 +639,9 @@ header li a:hover {
     padding-left: 6%;
     padding-right: 6%;
   }
-  header .blog-name a {
-    font-size: x-large;
-  }
+  /* header .blog-name a { */
+  /*   font-size: x-large; */
+  /* } */
 }
 
 @media (min-width: 481px) {
@@ -646,9 +649,9 @@ header li a:hover {
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
-  header .blog-name a {
-    font-size: xx-large;
-  }
+  /* header .blog-name a { */
+  /*   font-size: xx-large; */
+  /* } */
 }
 
 /* wide display: enforce maximum width of header to match content */
@@ -658,9 +661,9 @@ header li a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  header .blog-name a {
-    font-size: xx-large;
-  }
+  /* header .blog-name a { */
+  /*   font-size: xx-large; */
+  /* } */
 }
 
 /*
@@ -816,6 +819,10 @@ table tbody tr td {
   border-bottom: hidden;
 }
 
+.posts h3 {
+  font-size: xx-large;
+}
+
 .posts ul {
   list-style: none;
   padding-left: 0;
@@ -836,10 +843,18 @@ li span.post {
   font-size: larger;
 }
 
+a.post {
+  font-size: xx-large;
+}
+
+a:hover.post {
+  text-decoration: none;
+}
+
 span.post-descr {
   display: block;
+  font-size: large;
   font-style: italic;
-  font-size: medium;
   color: var(--color-alt-text);
 }
 
@@ -863,6 +878,11 @@ span.post-descr {
     Tags
 ================================================================== */
 
+.active-tag {
+  font-family: JuliaMono;
+  color: var(--color-yellow);
+}
+
 .tag-container {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -874,15 +894,22 @@ span.post-descr {
 }
 
 .tag a {
-  font-size: x-large;
+  font-size: xx-large;
+  font-family: JuliaMono;
   margin: 0em 0em 0em 0.25em;
   padding: 0em 0em 0em 0.25em;
 }
 
+.tag a:hover {
+  text-decoration: none;;
+}
+
 .tag span {
-  font-size: large;
+  font-size: x-large;
+  font-family: JuliaMono;
   margin: 0em 1em 0em 0em;
   padding: 0em 1em 0em 0em;
+  color: var(--color-yellow)
 }
 
 .tag i {

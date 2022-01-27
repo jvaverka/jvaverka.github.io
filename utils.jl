@@ -49,7 +49,7 @@ function write_posts(rpaths)::String
       <li class="post">
           <p>
               <span class="post">$pubdate</span>
-              <a href="/$path/">$title</a>
+              <a class="post" href="/$path/">$title</a>
               <span class="post-descr tag">$descr</span>
           </p>
       </li>
