@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/code/">code</a>, <a href="https://jvaverka.github.io/tag/julia/">julia</a></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/code/">code</a>, <a href="https://jvaverka.github.io/tag/julia/">julia</a></div>
 <h2 id="packages_versus_projects_in_julia">Packages Versus Projects in Julia</h2>
 <div class="franklin-toc"><ol><li>Packages Versus Projects in Julia<ol><li>Pkg.jl</li><li>What is a Package?</li><li>What is a Project?</li></ol></li></ol></div>
 <h3 id="pkgjl">Pkg.jl</h3>
@@ -142,7 +142,7 @@ julia&gt; meaning_of_life&#40;&#41;</code></pre>
   
   <content:encoded>
     <![CDATA[  
-<div class="tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/julia/">julia</a>, <a href="https://jvaverka.github.io/tag/life/">life</a></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/julia/">julia</a>, <a href="https://jvaverka.github.io/tag/life/">life</a></div>
 <h2 id="my_julia_story">My Julia Story</h2>
 <div class="franklin-toc"><ol><li>My Julia Story<ol><li>Origins</li><li>Adoption</li><li>Arrival</li></ol></li><li>Resources<ol><li>Julia Programming Language</li><li>Applied Linear Algebra</li></ol></li></ol></div>
 <h3 id="origins">Origins</h3>

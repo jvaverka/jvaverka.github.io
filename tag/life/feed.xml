@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/life/">life</a>, <a href="https://jvaverka.github.io/tag/linux/">linux</a></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/life/">life</a>, <a href="https://jvaverka.github.io/tag/linux/">linux</a></div>
 <h2 id="free_as_in_beer">Free As In Beer</h2>
 <div class="franklin-toc"><ol><li>Free As In Beer<ol><li>Free Beer?</li><li>GNU / Linux</li><li>Bad News<ol><li>Dependency Hell</li></ol></li><li>Good News<ol><li>Perfect Fit</li></ol></li></ol></li><li>Conclusion<ol><li>References</li></ol></li></ol></div>
 <h3 id="free_beer">Free Beer?</h3>
@@ -167,7 +167,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/julia/">julia</a>, <a href="https://jvaverka.github.io/tag/life/">life</a></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://jvaverka.github.io/tag/julia/">julia</a>, <a href="https://jvaverka.github.io/tag/life/">life</a></div>
 <h2 id="my_julia_story">My Julia Story</h2>
 <div class="franklin-toc"><ol><li>My Julia Story<ol><li>Origins</li><li>Adoption</li><li>Arrival</li></ol></li><li>Resources<ol><li>Julia Programming Language</li><li>Applied Linear Algebra</li></ol></li></ol></div>
 <h3 id="origins">Origins</h3>
