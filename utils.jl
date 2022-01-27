@@ -92,12 +92,13 @@ Franklin.@delay function hfun_alltags()
         write(
             io,
             """
-      <div class="tag">
-        <nobr>
-        <a class="tag" href="/tag/$t/">$(replace(t, "_" => " "))</a>
-        <span class="tag"> ($c)</span>
-        </nobr>
-      </div>
+<div class="tag">
+  <nobr>
+    <a class="tag" href="/tag/$t/">
+      $(replace(t, "_" => " "))<span style="color:var(--color-grey-dark)">(</span><span style="color:var(--color-yellow)">$c</span><span style="color:var(--color-grey-dark)">)</span>
+    </a>
+  </nobr>
+</div>
       """,
         )
     end
@@ -134,7 +135,7 @@ Franklin.@delay function hfun_posttags()
     pagetags === nothing && return ""
     io = IOBuffer()
     tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
-    write(io, """<div class="tag"><i class="fa fa-tag"></i>""")
+    write(io, """<div class="page-tag"><i class="fa fa-tag"></i>""")
     for tag in tags[1:(end - 1)]
         t = replace(tag, "_" => " ")
         write(io, """<a href="/tag/$tag/">$t</a>, """)

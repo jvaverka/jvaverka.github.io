@@ -578,7 +578,7 @@ nav li {
 }
 
 nav li a {
-  color: var(--color-cyan);
+  color: var(--color-grey-light);
   text-decoration: none;
   font-size: x-large;
   font-weight: bold;
@@ -590,7 +590,7 @@ nav li a {
   padding-bottom: 5px;
   margin-left: 7px;
   margin-right: 7px;
-  border-bottom: 2px solid var(--color-cyan);
+  border-bottom: 2px solid var(--color-grey-dark);
   transition: color 0.35s ease;
 }
 
@@ -639,9 +639,6 @@ header li a:hover {
     padding-left: 6%;
     padding-right: 6%;
   }
-  /* header .blog-name a { */
-  /*   font-size: x-large; */
-  /* } */
 }
 
 @media (min-width: 481px) {
@@ -649,9 +646,6 @@ header li a:hover {
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
-  /* header .blog-name a { */
-  /*   font-size: xx-large; */
-  /* } */
 }
 
 /* wide display: enforce maximum width of header to match content */
@@ -661,9 +655,6 @@ header li a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  /* header .blog-name a { */
-  /*   font-size: xx-large; */
-  /* } */
 }
 
 /*
@@ -883,6 +874,21 @@ span.post-descr {
   color: var(--color-yellow);
 }
 
+.page-tag {
+  font-family: JuliaMono;
+  font-size: xx-large;
+  padding: 0em 35% 0em 0em;
+}
+
+.page-tag a {
+  font-size: x-large;
+}
+
+.page-tag i {
+  margin: 0em 0.25em 0em 0em;
+  padding: 0em 0.25em 0em 0em;
+}
+
 .tag-container {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -896,8 +902,8 @@ span.post-descr {
 .tag a {
   font-size: xx-large;
   font-family: JuliaMono;
-  margin: 0em 0em 0em 0.25em;
-  padding: 0em 0em 0em 0.25em;
+  margin: 0.25em;
+  padding: 0.25em;
 }
 
 .tag a:hover {
@@ -907,20 +913,11 @@ span.post-descr {
 .tag span {
   font-size: x-large;
   font-family: JuliaMono;
-  margin: 0em 1em 0em 0em;
-  padding: 0em 1em 0em 0em;
-  color: var(--color-yellow)
+  color: var(--color-grey-light)
 }
 
 .tag i {
-  font-size: x-large;
-}
-
-@media (max-width: 900px) {
-  .tag a {
-    margin: 0em 0em 0em 0.15em;
-    padding: 0em 0em 0em 0.15em;
-  }
+  font-size: xx-large;
 }
 
 /* ==================================================================
@@ -953,9 +950,6 @@ span.post-descr {
   .social-container {
     display: contents;
     padding: 0em 0.125em;
-  }
-  .social-icon {
-    font-size: xx-large;
   }
 }
 
