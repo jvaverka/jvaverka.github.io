@@ -835,7 +835,7 @@ li span.post {
 }
 
 a.post {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 a:hover.post {
@@ -876,12 +876,8 @@ span.post-descr {
 
 .page-tag {
   font-family: JuliaMono;
-  font-size: xx-large;
-  padding: 0em 35% 0em 0em;
-}
-
-.page-tag a {
   font-size: x-large;
+  padding: 0em 35% 0em 0em;
 }
 
 .page-tag i {
@@ -900,20 +896,24 @@ span.post-descr {
 }
 
 .tag a {
-  font-size: xx-large;
+  font-size: x-large;
   font-family: JuliaMono;
   margin: 0.25em;
   padding: 0.25em;
 }
 
 .tag a:hover {
-  text-decoration: none;;
+  text-decoration: none;
 }
 
 .tag span {
   font-size: x-large;
   font-family: JuliaMono;
   color: var(--color-grey-light)
+}
+
+.tag span:hover {
+  color: var(--color-yellow);
 }
 
 .tag i {
