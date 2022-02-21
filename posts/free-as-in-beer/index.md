@@ -54,7 +54,9 @@ What's a _foot-gun_ you ask. Let me demonstrate.
 
 #### Dependency Hell
 
-![world-of-pain](./world-of-pain.jpg)
+> Smokey, my friend, you're entering a world of pain.
+
+&mdash; Walter[^walter]
 
 Ever heard of [`harfbuzz`](https://harfbuzz.github.io/)? Me neither until I
 thought ligatures were a real terminal necessity. Don't know what ligatures
@@ -126,11 +128,14 @@ the time they choose invest.
 
 ## Conclusion
 
-![opinion](./opinion.jpg)
+> Yeah, well, you know...
+> That's just like, your opinion, man.
 
-Good software exists. Some of it's free-as-in-beer, some of it's
+&mdash; Dude
+
+Good, free software exists. Some of it's free-as-in-beer, some of it's
 free-as-in-speech. There's many cases of both throughout Linux and the wider
-Open-source community. Best part - it's for everybody!
+Open-source community.
 
 Remember, you are not alone. There is a strong community of Linux
 enthusiasts in the world who are willing and able to help you get started.
@@ -138,14 +143,13 @@ Anyone can do this and there is nothing to lose.
 
 Linux (and Open-source software in general) is a bountiful garden. Dig it.
 
-Share this with a curious soul or anyone asking about Linux.
-
 ### References
 
 [^free]: [Gratis versus libre](https://en.wikipedia.org/wiki/Gratis_versus_libre)
 [^linux]: [Jamie Zawinski](https://www.brainyquote.com/quotes/jamie_zawinski_320496)
 [^but]: See the [Good News](/posts/free-as-in-beer#good_news)
 [^term]: You learn to love them. As I write this there are 8 on my system.
+[^walter]: [Smokey, this is not Nam. There are rules.](https://www.youtube.com/watch?v=YedqV4Gl_us)
 [^jk]: Just kidding, they're awesome ⇒ ⇗ ⇑ ⇖ ⇐ ⇙ ⇓ ⇘ ⇒ α ≥ β ≤ γ ≠ δ ⬖
 [^zen]: From [Zen and the Art of Motorcycle Maintenance](https://www.goodreads.com/book/show/629.Zen_and_the_Art_of_Motorcycle_Maintenance)
 [^cli]: [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
