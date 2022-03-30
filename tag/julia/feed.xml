@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  Packages Versus Projects in Julia  ]]>
   </title>
-  <link> https://jvaverka.github.io/posts/packages-versus-projects-in-julia/index.html </link>
-  <guid> https://jvaverka.github.io/posts/packages-versus-projects-in-julia/index.html </guid>
+  <link> https://jvaverka.github.io/notes/packages-versus-projects-in-julia/index.html </link>
+  <guid> https://jvaverka.github.io/notes/packages-versus-projects-in-julia/index.html </guid>
   <description>
     <![CDATA[  The Julia ecosystem has Packages &amp; Projects. This short guide attempts to help beginners get started with both.  ]]>
   </description>  
@@ -134,8 +134,8 @@ julia&gt; meaning_of_life&#40;&#41;</code></pre>
   <title>
     <![CDATA[  My Julia Story  ]]>
   </title>
-  <link> https://jvaverka.github.io/posts/my-julia-story/index.html </link>
-  <guid> https://jvaverka.github.io/posts/my-julia-story/index.html </guid>
+  <link> https://jvaverka.github.io/notes/my-julia-story/index.html </link>
+  <guid> https://jvaverka.github.io/notes/my-julia-story/index.html </guid>
   <description>
     <![CDATA[  The path I traveled through academia and industry that lead me to Julia.  ]]>
   </description>  
