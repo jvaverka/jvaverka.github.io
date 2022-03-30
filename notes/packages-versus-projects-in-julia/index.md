@@ -7,7 +7,7 @@ hascode = true
 tags = ["julia", "code"]
 +++
 
-{{ posttags }}
+{{ notetags }}
 
 ## Packages Versus Projects in Julia
 

@@ -7,7 +7,7 @@ hascode = true
 tags = ["life", "linux"]
 +++
 
-{{ posttags }}
+{{ notetags }}
 
 ## Free As In Beer
 
@@ -147,7 +147,7 @@ Linux (and Open-source software in general) is a bountiful garden. Dig it.
 
 [^free]: [Gratis versus libre](https://en.wikipedia.org/wiki/Gratis_versus_libre)
 [^linux]: [Jamie Zawinski](https://www.brainyquote.com/quotes/jamie_zawinski_320496)
-[^but]: See the [Good News](/posts/free-as-in-beer#good_news)
+[^but]: See the [Good News](/notes/free-as-in-beer#good_news)
 [^term]: You learn to love them. As I write this there are 8 on my system.
 [^walter]: [Smokey, this is not Nam. There are rules.](https://www.youtube.com/watch?v=YedqV4Gl_us)
 [^jk]: Just kidding, they're awesome ⇒ ⇗ ⇑ ⇖ ⇐ ⇙ ⇓ ⇘ ⇒ α ≥ β ≤ γ ≠ δ ⬖

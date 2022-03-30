@@ -8,6 +8,6 @@ showall = true
 tags = ["finance", "literate"]
 +++
 
-{{ posttags }}
+{{ notetags }}
 
 \literate{/_literate/invsci-01.jl}

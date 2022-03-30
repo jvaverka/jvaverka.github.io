@@ -26,16 +26,16 @@ function hfun_eval(arg)
     return String(take!(io))
 end
 
-function write_posts(rpaths)::String
-    sort_posts!(rpaths)
+function write_notes(rpaths)::String
+    sort_notes!(rpaths)
     curyear = Dates.year(Franklin.pagevar(rpaths[1], :date))
     io = IOBuffer()
-    write(io, "<h3 class=\"posts\">$curyear</h3>")
-    write(io, "<ul class=\"posts\">")
+    write(io, "<h3 class=\"notes\">$curyear</h3>")
+    write(io, "<ul class=\"notes\">")
     for rp in rpaths
         year = Dates.year(Franklin.pagevar(rp, :date))
         if year < curyear
-            write(io, "<h3 class=\"posts\">$year</h3>")
+            write(io, "<h3 class=\"notes\">$year</h3>")
             curyear = year
         end
         title = Franklin.pagevar(rp, :title)
@@ -46,21 +46,21 @@ function write_posts(rpaths)::String
         write(
             io,
             """
-      <li class="post">
+      <li class="note">
           <p>
-              <span class="post">$pubdate</span>
-              <a class="post" href="/$path/">$title</a>
-              <span class="post-descr tag">$descr</span>
+              <span class="note">$pubdate</span>
+              <a class="note" href="/$path/">$title</a>
+              <span class="note-descr tag">$descr</span>
           </p>
       </li>
       """,
         )
     end
-    write(io, "</ul>")  #= posts =#
+    write(io, "</ul>")  #= notes =#
     return String(take!(io))
 end
 
-function sort_posts!(rpaths)
+function sort_notes!(rpaths)
     sorter(p) = begin
         pvd = Franklin.pagevar(p, :date)
         if isnothing(pvd)
@@ -71,12 +71,12 @@ function sort_posts!(rpaths)
     return sort!(rpaths; by=sorter, rev=true)
 end
 
-function hfun_allposts()::String
+function hfun_allnotes()::String
     rpaths = [
-        joinpath("posts", post, "index.md") for
-        post in readdir("posts") if !endswith(post, ".md")
+        joinpath("notes", note, "index.md") for
+        note in readdir("notes") if !endswith(note, ".md")
     ]
-    return write_posts(rpaths)
+    return write_notes(rpaths)
 end
 
 Franklin.@delay function hfun_alltags()
@@ -109,7 +109,7 @@ end
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
-    return write_posts(rpaths)
+    return write_notes(rpaths)
 end
 
 function hfun_weave2html(document)
@@ -130,7 +130,7 @@ function hfun_weave2html(document)
     return final
 end
 
-Franklin.@delay function hfun_posttags()
+Franklin.@delay function hfun_notetags()
     pagetags = Franklin.globvar("fd_page_tags")
     pagetags === nothing && return ""
     io = IOBuffer()
@@ -153,7 +153,7 @@ function hfun_socialicons()
         """
 <div class="social-container">
     <div class="social-icon">
-        <a href="/posts/" title="Blog">
+        <a href="/notes/" title="Notes">
             <i class="fa fa-pencil"></i>
         </a>
     </div>
@@ -189,17 +189,17 @@ function hfun_socialicons()
 end
 
 """
-    newpost(;title::String, descr::String, tags::Vector{String}, code=false)
+    newnote(;title::String, descr::String, tags::Vector{String}, code=false)
 """
-function newpost(;title::String, descr::String, tags::Vector{String}, code=false)
-    path = joinpath(@__DIR__, "posts", replace(lowercase(title), " " => "-"))
-    post = joinpath(path, "index.md")
+function newnote(;title::String, descr::String, tags::Vector{String}, code=false)
+    path = joinpath(@__DIR__, "notes", replace(lowercase(title), " " => "-"))
+    note = joinpath(path, "index.md")
     mkpath(path)
-    touch(post)
+    touch(note)
     y = Dates.year(Dates.today())
     m = Dates.month(Dates.today())
     d = Dates.day(Dates.today())
-    open(post, "w") do io
+    open(note, "w") do io
         write(io, """
         +++
         title = "$title"
@@ -210,7 +210,7 @@ function newpost(;title::String, descr::String, tags::Vector{String}, code=false
         tags = $(sort(tags))
         +++
 
-        {{ posttags }}
+        {{ notetags }}
 
         ## $title
 

@@ -7,7 +7,7 @@ hascode = true
 tags = ["julia", "life"]
 +++
 
-{{ posttags }}
+{{ notetags }}
 
 ## My Julia Story
 
@@ -55,7 +55,7 @@ over the world.
 
 While I was hoping to champion Julia from within my company, I didn't wait to
 begin making small contributions. I started building fun web dashboards with
-`Dash.jl`, helpful study materials with `Symbolics.jl`, this blog with
+`Dash.jl`, helpful study materials with `Symbolics.jl`, this website with
 `Franklin.jl`, and even helped (a _tiny_ bit) support `LanguageServer.jl` in
 [LunarVim](https://www.lunarvim.org/languages/julia.html#julia). After gaining
 some confidence I was able to help other newcomers by pointing out useful

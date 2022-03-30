@@ -803,46 +803,46 @@ table tbody tr td {
 }
 
 /* ==================================================================
-    Posts
+    Notes
 ================================================================== */
 
-.posts h2 {
+.notes h2 {
   border-bottom: hidden;
 }
 
-.posts h3 {
+.notes h3 {
   font-size: xx-large;
 }
 
-.posts ul {
+.notes ul {
   list-style: none;
   padding-left: 0;
 }
 
-.posts a {
+.notes a {
   font-size: larger;
 }
 
-.posts span {
+.notes span {
   font-weight: lighter;
 }
 
-li span.post {
+li span.note {
   float: right;
   color: var(--color-foreground);
   padding-left: 30px;
   font-size: larger;
 }
 
-a.post {
+a.note {
   font-size: x-large;
 }
 
-a:hover.post {
+a:hover.note {
   text-decoration: none;
 }
 
-span.post-descr {
+span.note-descr {
   display: block;
   font-size: large;
   font-style: italic;
