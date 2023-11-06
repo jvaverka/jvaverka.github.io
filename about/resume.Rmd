@@ -1,0 +1,268 @@
+---
+title: "Jacob Vaverka's resume"
+author: Jacob Vaverka
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+# uncomment this line to produce HTML and PDF in RStudio:
+knit: pagedown::chrome_print
+execute: 
+  freeze: true
+---
+
+
+Aside
+================================================================================
+
+![me](../../images/me.jpg)
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-link"></i> [jvaverka.github.io](https://jvaverka.github.io/)
+- <i class="fa fa-github"></i> [jvaverka](https://github.com/jvaverka/)
+- <i class="fa fa-linkedin"></i> [jacob-vaverka](https://linkedin.com/in/jacob-vaverka-b5965052/)
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+- Modeling dynamic systems.
+
+- Creating insightful visualizations.
+
+- Maintaining HPC systems.
+
+- Building full-stack & desktop apps.
+
+- Leading diverse technical efforts.
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Built with [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated `r format(Sys.Date(), format = "%b %d, %Y")`.
+
+Main
+================================================================================
+
+Jacob Vaverka {#title}
+--------------------------------------------------------------------------------
+
+### HPC Software Developer
+
+Lifelong learner striving to stay curious.
+
+Professional Experience {data-icon=briefcase}
+--------------------------------------------------------------------------------
+
+### Sales Engineer
+
+JuliaHub, Inc.
+
+Remote
+
+Present - 2021
+
+- Industrial modeling simulations running on distributed systems.
+- Integrator of Scientific Machine Learning (SciML) capabilities with large-scale industrial models.
+- Contributor to key software offerings for modeling and simulation framework, JuliaSim.
+- Writer of JuliaSim Surrogates documentation for accelerating expensive models.
+- Creator of demonstrations using JuliaSim on JuliaHub to execute simulations on cloud-compute.
+- Trained customers on Julia, SciML and JuliaSim packages.
+
+### HPC Application Developer
+
+General Motors
+
+Detroit, MI
+
+2021 - 2018
+
+- Engineered desktop application built on [Computational Model Builder](https://www.computationalmodelbuilder.org/).
+- Back-end HPC applications interfacing with desktop application.
+- Back-end applications for encrypted file transfer across High Performance Compute environment.
+- Elasticsearch pipeline to capture and monitor simulation job metrics.
+- Data transformation pipeline to compile, submit and run OpenFOAM simulations for various CFD engineering groups.
+- _In situ_ and _situ_ visualizations built on ParaView.
+- Implementer of engineering proof-of-concepts into production applications.
+- Leader of small teams to complete various project objectives.
+
+### Decision Support Analyst
+
+General Motors
+
+Roswell, GA
+
+2018 - 2017
+
+- Large-scale queries for global market communication and Customer Relation Management.
+- Complex data pipelines in SQL, Bash and Awk on OpenSUSE.
+- Carefully implemented data protection practices.
+
+### Systems Developer
+
+General Motors
+
+Roswell, GA
+
+2017 - 2016
+
+- Global sales intelligence and planning for all GM brands.
+- Built and managed end-to-end ETL pipeline.
+- Delivered key performance indicators and aggregate reports.
+- Fast-paced agile environment with face-to-face customer interaction.
+
+Open Source Contributions {data-icon=lock-open data-concise=false}
+--------------------------------------------------------------------------------
+
+### [SciML Open Source Scientific Machine Learning](https://github.com/SciML)
+
+<i class="fa fa-books"></i>
+
+Remote
+
+2023 - 2022
+
+- Built website for [SciML Book](https://book.sciml.ai/) MIT Course `18.337J` / `6.338J`.
+- [Documentation updates and fixes](https://github.com/SciML/DiffEqDocs.jl/pull/591) for `DiffEq.jl`.
+
+:::aside
+Fun fact: I like puzzles.
+In high school I learned to solve a [Rubik's Cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) and got pretty fast at solving it (best ~45 seconds).
+Years later I was gifted a [Megaminx](https://en.wikipedia.org/wiki/Megaminx) - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik's Cube to solve it in 1 day.
+:::
+
+### Julia Ecosystem
+
+<i class="fa fa-books"></i>
+
+Remote
+
+2022 - 2021
+
+- [Documentation fix](https://github.com/JuliaGaussianProcesses/AbstractGPs.jl/pull/296) for `AbstractGPs`.
+- [Documentation update](https://github.com/tlienart/Franklin.jl/pull/926) for `Franklin.jl`.
+- [Documentation fix](https://github.com/fredrikekre/Literate.jl/pull/154) for `Literate.jl`.
+
+### LunarVim
+
+<i class="fa fa-books"></i>
+
+Remote
+
+2021 - 2020
+
+- Added [language server support for Julia](https://github.com/LunarVim/LunarVim/pull/918).
+- Added [documentation for using julia language server](https://github.com/LunarVim/lunarvim.org/pull/68).
+- Added [documentation for using julia language server](https://github.com/LunarVim/lunarvim.org/pull/68).
+
+Technical Skills {data-icon=code}
+--------------------------------------------------------------------------------
+
+### Languages and Frameworks
+
+<i class="fa fa-books"></i>
+
+<i class="fa fa-globe"></i>
+
+<i class="fa fa-books"></i>
+
+Through personal and professional projects I have learned and explored many programming languages and frameworks.
+Below is a list showing some of these languages sorted by proficiency (advanced to functional).
+
+:::concise
+- ***Language***
+- `Julia`
+- `JavaScript`
+- `Python`
+- `C++`
+- `Java`
+- `Ruby`
+- `R`
+- ***Framework***
+- `ModelingToolkit.jl`
+- `Shiny`
+- `React`
+- `Rails`
+- `Dash`
+- `VTK`
+- `Qt`
+:::
+
+:::aside
+[Clifton Strengths](https://www.gallup.com/cliftonstrengths/en/home.aspx)
+
+- Learner
+- Ideation
+- Futuristic
+- Achiever
+- Intellection
+:::
+
+Continued Learning {.page-break-before data-icon=book data-concise=false}
+--------------------------------------------------------------------------------
+
+### Advanced Statistical Regression
+
+Johns Hopkins University
+
+Remote
+
+2022
+
+:::aside
+Follow my [continuous learning projects](https://jvaverka.github.io/projects/) in fields like applied math, modeling / simulation, web dev and more.
+:::
+
+### Mathematics of Finance
+
+Johns Hopkins University
+
+Remote
+
+2021
+
+### Matrix Theory
+
+Johns Hopkins University
+
+Remote
+
+2019
+
+### Statistics and Data Analysis
+
+Johns Hopkins University
+
+Remote
+
+2019
+
+Certifications {data-icon=certificate data-concise=false}
+--------------------------------------------------------------------------------
+
+### Actuarial Science
+
+Exam P: Probability
+
+Remote
+
+2015
+
+:::aside
+Before landing my first IT job, I planned to pursue a career in actuarial science.
+:::
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Bachelor of Science in Mathematics
+
+University of Georgia
+
+Athens, GA
+
+2013 - 2009

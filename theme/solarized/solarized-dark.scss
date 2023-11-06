@@ -1,0 +1,75 @@
+/*-- scss:defaults --*/
+
+$base03:    #002b36 !default;
+$base02:    #073642 !default;
+$base01:    #586e75 !default;
+$base00:    #657b83 !default;
+$base0:     #839496 !default;
+$base1:     #93a1a1 !default;
+$base2:     #eee8d5 !default;
+$base3:     #fdf6e3 !default;
+$yellow:    #b58900 !default;
+$orange:    #cb4b16 !default;
+$red:       #dc322f !default;
+$magenta:   #d33682 !default;
+$violet:    #6c71c4 !default;
+$blue:      #268bd2 !default;
+$cyan:      #2aa198 !default;
+$green:     #859900 !default;
+
+$primary:       $magenta !default;
+$secondary:     $base02 !default;
+$success:       $primary !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $base1 !default;
+$dark:          $base03 !default;
+$code-fg:       $base01 !default;
+$code-bg:       $base03 !default;
+
+$min-contrast-ratio:   2 !default;
+
+// Body
+
+$body-bg:       $dark !default;
+$body-color:    $light !default;
+
+// Links
+
+$link-color:    $primary !default;
+
+// Listings
+
+div.quarto-grid-item {
+    border-color: $dark;
+}
+
+img.card-img {
+    border-radius: 0;
+}
+
+div.card-body.post-contents {
+    background-color: $base02;
+}
+
+// Code
+
+div.cell-code {
+    background-color: $code-bg !important;
+}
+
+div.cell-output {
+    background-color: $code-bg !important;
+    border-left: solid;
+    border-left-width: medium;
+    border-left-color: $magenta;
+}
+
+code {
+    background-color: $code-bg !important;
+}
+
+p code {
+    color: $code-fg !important;
+}

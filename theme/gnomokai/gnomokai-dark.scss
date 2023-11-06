@@ -1,0 +1,67 @@
+/*-- scss:defaults --*/
+
+$white:    #fff !default;
+$gray-100: #fafafa !default;
+$gray-200: #f6f5f4 !default;
+$gray-300: #deddda !default;
+$gray-400: #c0bfbc !default;
+$gray-500: #9a9996 !default;
+$gray-600: #77767b !default;
+$gray-700: #404040 !default;
+$gray-800: #323232 !default;
+$gray-900: #282828 !default;
+$black:    #1e1e1e !default;
+
+$blue:    #99c1f1 !default;
+$indigo:  #ae81ff !default;
+$purple:  #dc8add !default;
+$pink:    #f92672 !default;
+$red:     #f66151 !default;
+$orange:  #ffbe6f !default;
+$yellow:  #f9f06b !default;
+$green:   #8ff0a4 !default;
+$teal:    #58c2c1 !default;
+$cyan:    #66d9ef !default;
+
+$primary:       $orange !default;
+$secondary:     $gray-700 !default; // banner
+$success:       $primary !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-900 !default;
+$code-bg:       $black !default;
+$code-fg:       $primary !default;
+
+$min-contrast-ratio:   2 !default;
+
+// Body
+
+$body-bg:       $dark !default;
+$body-color:    $light !default;
+
+// Links
+
+$link-color:    $primary !default;
+
+// Code
+
+div.cell-code {
+    background-color: $code-bg !important;
+}
+
+div.cell-output {
+    background-color: $code-bg !important;
+    border-left: solid;
+    border-left-width: medium;
+    border-left-color: $gray-700;
+}
+
+code {
+    background-color: $code-bg !important;
+}
+
+p code {
+    color: $code-fg !important;
+}

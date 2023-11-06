@@ -1,6 +1,11 @@
-# default
+# franklin
 __site/
 .DS_Store
 franklin
 franklin.pub
 node_modules/
+
+# quarto
+.quarto/
+_freeze/
+_site/

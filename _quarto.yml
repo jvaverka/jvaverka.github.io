@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  title: jvaverka
+  site-url: https://jvaverka.github.io
+  description: "Blog about puzzles and programming"
+  page-footer: © 2023, Jacob Vaverka
+  favicon: images/blue-tree.png
+  navbar:
+    logo: images/blue-tree.png
+    right:
+      - icon: code-slash
+        href: projects/index.md
+      - icon: easel
+        href: talks/index.md
+      - icon: info-circle
+        href: about/index.md
+
+format:
+  html:
+    toc: true
+    toc-title: Page Contents
+    title-block-style: default
+    mainfont: Ubuntu
+    monofont: Ubuntu Mono
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    theme:
+      light: [simplex, theme/gnome-one/gnome-one-light.scss]
+      dark: [simplex, theme/gnome-one/gnome-one-dark.scss]
+
+highlight-style: github
+
+jupyter: julia-1.9
+execute: 
+  freeze: auto

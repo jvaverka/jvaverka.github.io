@@ -1,0 +1,90 @@
+---
+title: Advent of Code
+subtitle: Day 1
+image: aoc.jpg
+date: 2022-11-27
+categories: [code]
+draft: false
+---
+
+[Advent of code](https://adventofcode.com/2022) is a fantastic opportunity for programmers to hone their skills.
+Here's a solution in Julia for Day 1, 2022.
+
+## Input Data
+
+Start by loading data for the sample and our full input.
+
+```{julia}
+# https://adventofcode.com/2022/day/1
+example = readlines("day_1_ex.txt")
+```
+
+Today's challenge involves counting the inventory of each elf.
+A logical starting point is to consider the data structure.
+A simple vector of vectors should well represent all items of all elves.
+
+```{julia}
+#| output: false
+struct Inventory
+    items::Vector{Vector{Int64}}
+end
+```
+
+`Inventory` has field `items` which will hold all the items of a particular elf.
+In order to create the desired vector of vectors, we want the input to be split by new lines.
+It is easy to write a function which takes in some vector and splits it by some function.
+
+```{julia}
+#| output: false
+function split_elf_input(λ::Function, input::Vector)
+    first, last = firstindex(input), lastindex(input)
+    splits = [first-1; findall(λ, input); last]
+    split1, split2 = splits[1:end-1], splits[2:end]
+    return [input[start+1:finish] for (start, finish) in zip(split1, split2)]
+end
+```
+
+We can now write the function that will parse our challenge input into the desired data structure.
+
+```{julia}
+#| output: false
+function Inventory(input::Vector{Vector{String}})
+    filter!.(!isempty, input)
+    inventory_input = map(i -> parse.(Int, i), input)
+    Inventory(inventory_input)
+end
+```
+
+## Solve
+
+So, we have everything we need to describe the full elfish inventory.
+All that's left is to describe the method of finding the _top elf_.
+We can do this in a general way so that we can elect how many of the top elves are returned.
+
+```{julia}
+#| output: false
+top_elf(inventory::Inventory, nelves = 1) = mapreduce(+, 1:nelves) do elf
+    calories, index = findmax(sum.(inventory.items))
+    popat!(inventory.items, index)
+    return calories
+end
+```
+
+Parts one and two differ in the number of top elves required.
+We can write separate functions to accomodate this.
+
+```{julia}
+#| output: false
+part_1(input) = top_elf(Inventory(split_elf_input(isempty, input)))
+part_2(input) = top_elf(Inventory(split_elf_input(isempty, input)), 3)
+```
+
+Time to solve!
+
+```{julia}
+part_1(example)
+```
+
+```{julia}
+part_2(example)
+```
