@@ -29,13 +29,9 @@ Skills {#skills}
 --------------------------------------------------------------------------------
 
 - Modeling dynamic systems.
-
 - Creating insightful visualizations.
-
-- Maintaining HPC systems.
-
+- Maintaining HPC apps & systems.
 - Building full-stack & desktop apps.
-
 - Leading diverse technical efforts.
 
 Disclaimer {#disclaimer}
@@ -51,9 +47,9 @@ Main
 Jacob Vaverka {#title}
 --------------------------------------------------------------------------------
 
-### HPC Software Developer
+### Software Developer
 
-Lifelong learner striving to stay curious.
+Solving problems and puzzles with math, science and technology.
 
 Professional Experience {data-icon=briefcase}
 --------------------------------------------------------------------------------
@@ -66,12 +62,12 @@ Remote
 
 Present - 2021
 
-- Industrial modeling simulations running on distributed systems.
+- Contributor to industrial models and simulations run on distributed systems in many domains.
 - Integrator of Scientific Machine Learning (SciML) capabilities with large-scale industrial models.
-- Contributor to key software offerings for modeling and simulation framework, JuliaSim.
-- Writer of JuliaSim Surrogates documentation for accelerating expensive models.
-- Creator of demonstrations using JuliaSim on JuliaHub to execute simulations on cloud-compute.
-- Trained customers on Julia, SciML and JuliaSim packages.
+- Translator of customer needs into features for modeling and simulation framework, JuliaSim.
+- Writer of JuliaHub & JuliaSim technical documentation.
+- Demonstrator of JuliaSim to accelerate, execute, and analyze simulations on JuliaHub.
+- Trainer customers on Julia, SciML and JuliaSim packages.
 
 ### HPC Application Developer
 
@@ -81,14 +77,12 @@ Detroit, MI
 
 2021 - 2018
 
-- Engineered desktop application built on [Computational Model Builder](https://www.computationalmodelbuilder.org/).
-- Back-end HPC applications interfacing with desktop application.
-- Back-end applications for encrypted file transfer across High Performance Compute environment.
-- Elasticsearch pipeline to capture and monitor simulation job metrics.
-- Data transformation pipeline to compile, submit and run OpenFOAM simulations for various CFD engineering groups.
-- _In situ_ and _situ_ visualizations built on ParaView.
-- Implementer of engineering proof-of-concepts into production applications.
-- Leader of small teams to complete various project objectives.
+- Engineer of desktop application built on top [Computational Model Builder](https://www.computationalmodelbuilder.org/).
+- Engineer of back-end applications for encrypted file transfer across High Performance Compute environment.
+- Contributor to Elasticsearch pipeline to capture and monitor simulation job metrics.
+- Engineer of front-end application and data transformation pipeline to compile, submit and run OpenFOAM simulations for various CFD engineering groups.
+- Implementer of _In situ_ and _situ_ visualizations built on ParaView.
+- Leader of small teams to complete targeted project deliverables.
 
 ### Decision Support Analyst
 
@@ -98,9 +92,8 @@ Roswell, GA
 
 2018 - 2017
 
-- Large-scale queries for global market communication and Customer Relation Management.
-- Complex data pipelines in SQL, Bash and Awk on OpenSUSE.
-- Carefully implemented data protection practices.
+- Builder of complex queries and data pipeline for large-scale, global market communication and Customer Relation Management.
+- Guardian and learner of data protection regulations and best practices.
 
 ### Systems Developer
 
@@ -110,65 +103,52 @@ Roswell, GA
 
 2017 - 2016
 
-- Global sales intelligence and planning for all GM brands.
-- Built and managed end-to-end ETL pipeline.
-- Delivered key performance indicators and aggregate reports.
-- Fast-paced agile environment with face-to-face customer interaction.
+- Developer of global sales intelligence and planning tools for all GM brands.
+- Builder and maintainer of end-to-end ETL pipeline using R, SQL, and relational databases.
+- Gatherer and slicer of key performance indicators and reports using R, SQL and IBM proprietary front-end tools.
+- Gatherer of requirements and leader of discussion in fast-paced, agile environment with face-to-face customer interaction.
 
 Open Source Contributions {data-icon=lock-open data-concise=false}
 --------------------------------------------------------------------------------
 
-### [SciML Open Source Scientific Machine Learning](https://github.com/SciML)
+### Open-source Contributions
 
-<i class="fa fa-books"></i>
+For Fun & No Profit
 
 Remote
 
-2023 - 2022
+Evolving
 
-- Built website for [SciML Book](https://book.sciml.ai/) MIT Course `18.337J` / `6.338J`.
-- [Documentation updates and fixes](https://github.com/SciML/DiffEqDocs.jl/pull/591) for `DiffEq.jl`.
+A short list of open-source projects that I have made small contributions to in
+the form of documentation, tests or small features.
+
+- [DiffEq.jl](https://github.com/SciML/DiffEqDocs.jl)
+- [AbstractGPs.jl](https://github.com/JuliaGaussianProcesses/AbstractGPs.jl)
+- [Franklin.jl](https://github.com/tlienart/Franklin.jl)
+- [Literate.jl](https://github.com/fredrikekre/Literate.jl)
+- [LunarVim](https://github.com/LunarVim/LunarVim)
+
+<i class="fa fa-globe"></i> <i class="fa fa-book"></i>
+I built the [SciML Book](https://book.sciml.ai/) website for MIT Course `18.337J` / `6.338J`
 
 :::aside
-Fun fact: I like puzzles.
+**Fun fact**
+
 In high school I learned to solve a [Rubik's Cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) and got pretty fast at solving it (best ~45 seconds).
-Years later I was gifted a [Megaminx](https://en.wikipedia.org/wiki/Megaminx) - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik's Cube to solve it in 1 day.
+Years later I was gifted a [Megaminx](https://en.wikipedia.org/wiki/Megaminx) - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik's Cube to solve it in a few hours.
 :::
 
-### Julia Ecosystem
-
-<i class="fa fa-books"></i>
-
-Remote
-
-2022 - 2021
-
-- [Documentation fix](https://github.com/JuliaGaussianProcesses/AbstractGPs.jl/pull/296) for `AbstractGPs`.
-- [Documentation update](https://github.com/tlienart/Franklin.jl/pull/926) for `Franklin.jl`.
-- [Documentation fix](https://github.com/fredrikekre/Literate.jl/pull/154) for `Literate.jl`.
-
-### LunarVim
-
-<i class="fa fa-books"></i>
-
-Remote
-
-2021 - 2020
-
-- Added [language server support for Julia](https://github.com/LunarVim/LunarVim/pull/918).
-- Added [documentation for using julia language server](https://github.com/LunarVim/lunarvim.org/pull/68).
-- Added [documentation for using julia language server](https://github.com/LunarVim/lunarvim.org/pull/68).
 
 Technical Skills {data-icon=code}
 --------------------------------------------------------------------------------
 
 ### Languages and Frameworks
 
-<i class="fa fa-books"></i>
+For Fun & Potential Profit
 
-<i class="fa fa-globe"></i>
+Remote
 
-<i class="fa fa-books"></i>
+Evolving
 
 Through personal and professional projects I have learned and explored many programming languages and frameworks.
 Below is a list showing some of these languages sorted by proficiency (advanced to functional).
@@ -178,22 +158,24 @@ Below is a list showing some of these languages sorted by proficiency (advanced 
 - `Julia`
 - `JavaScript`
 - `Python`
+- `R`
+- `Ruby`
 - `C++`
 - `Java`
-- `Ruby`
-- `R`
 - ***Framework***
 - `ModelingToolkit.jl`
 - `Shiny`
-- `React`
-- `Rails`
 - `Dash`
+- `Rails`
+- `React`
 - `VTK`
 - `Qt`
 :::
 
 :::aside
-[Clifton Strengths](https://www.gallup.com/cliftonstrengths/en/home.aspx)
+[**Clifton Strengths**](https://www.gallup.com/cliftonstrengths/en/home.aspx)
+
+Top 5 natural talents & strengths.
 
 - Learner
 - Ideation
@@ -214,7 +196,9 @@ Remote
 2022
 
 :::aside
-Follow my [continuous learning projects](https://jvaverka.github.io/projects/) in fields like applied math, modeling / simulation, web dev and more.
+**Fun fact**
+
+You can follow my [continuous learning projects](https://jvaverka.github.io/projects/) in fields like applied math, modeling / simulation, web dev and more.
 :::
 
 ### Mathematics of Finance
@@ -253,6 +237,8 @@ Remote
 2015
 
 :::aside
+**Fun fact**
+
 Before landing my first IT job, I planned to pursue a career in actuarial science.
 :::
 
