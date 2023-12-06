@@ -16,7 +16,7 @@ execute:
 Aside
 ================================================================================
 
-![me](../../images/me.jpg)
+![me](../images/me.jpg)
 
 Contact {#contact}
 --------------------------------------------------------------------------------
@@ -29,9 +29,11 @@ Skills {#skills}
 --------------------------------------------------------------------------------
 
 - Modeling dynamic systems.
-- Creating insightful visualizations.
 - Maintaining HPC apps & systems.
 - Building full-stack & desktop apps.
+- Creating insightful visualizations.
+- Implementing complex algorithms.
+- Simplifying complex systems.
 - Leading diverse technical efforts.
 
 Disclaimer {#disclaimer}
@@ -60,14 +62,14 @@ JuliaHub, Inc.
 
 Remote
 
-Present - 2021
+2023 - 2021
 
-- Contributor to industrial models and simulations run on distributed systems in many domains.
-- Integrator of Scientific Machine Learning (SciML) capabilities with large-scale industrial models.
-- Translator of customer needs into features for modeling and simulation framework, JuliaSim.
-- Writer of JuliaHub & JuliaSim technical documentation.
-- Demonstrator of JuliaSim to accelerate, execute, and analyze simulations on JuliaHub.
-- Trainer customers on Julia, SciML and JuliaSim packages.
+- Contributor to industrial models and simulations run on distributed systems in domains such as automotive, manufacturing, and more.
+- Integrator of Scientific Machine Learning (SciML) capabilities with large-scale industrial models to perform cutting edge simulations.
+- Translator of customer needs into features for modeling and simulation framework, JuliaSim, and cloud computing platform, JuliaHub.
+- Author of JuliaHub & JuliaSim documentation and white papers.
+- Demonstrator to technical audiences using JuliaSim to accelerate, simulate, analyze, and understand physical models on JuliaHub.
+- Trainer and coach to customers learning Julia, SciML and JuliaSim.
 
 ### HPC Application Developer
 
@@ -77,11 +79,11 @@ Detroit, MI
 
 2021 - 2018
 
-- Engineer of desktop application built on top [Computational Model Builder](https://www.computationalmodelbuilder.org/).
-- Engineer of back-end applications for encrypted file transfer across High Performance Compute environment.
-- Contributor to Elasticsearch pipeline to capture and monitor simulation job metrics.
-- Engineer of front-end application and data transformation pipeline to compile, submit and run OpenFOAM simulations for various CFD engineering groups.
-- Implementer of _In situ_ and _situ_ visualizations built on ParaView.
+- Engineer of desktop application for [CFD](https://en.wikipedia.org/wiki/Computational_fluid_dynamics) simulations built on top [Computational Model Builder](https://www.computationalmodelbuilder.org/), [OpenFOAM](https://www.openfoam.com/) and [ParaView](https://www.paraview.org/).
+- Engineer of back-end applications for encrypted file transfer across High Performance Compute environment using Boost C++ libraries.
+- Developer of [Elasticsearch](https://www.elastic.co/elasticsearch/) pipeline to capture, monitor and display real-time job metrics of High Performance Compute simulations.
+- Developer of client-side application for data transformation pipeline to compile, submit and run [OpenFOAM](https://www.openfoam.com/) simulations for various [CFD](https://en.wikipedia.org/wiki/Computational_fluid_dynamics) applications such as aerodynamics, heat transfer, soiling, and more.
+- Implementer of _In-situ_ and _situ_ visualizations built on [ParaView](https://www.paraview.org/)
 - Leader of small teams to complete targeted project deliverables.
 
 ### Decision Support Analyst
@@ -92,8 +94,8 @@ Roswell, GA
 
 2018 - 2017
 
-- Builder of complex queries and data pipeline for large-scale, global market communication and Customer Relation Management.
-- Guardian and learner of data protection regulations and best practices.
+- Builder of complex queries and data pipeline for large-scale, global market communication campaigns and Customer Relation Management.
+- Guardian and protector of data following regulations and best practices.
 
 ### Systems Developer
 
@@ -103,17 +105,18 @@ Roswell, GA
 
 2017 - 2016
 
-- Developer of global sales intelligence and planning tools for all GM brands.
-- Builder and maintainer of end-to-end ETL pipeline using R, SQL, and relational databases.
-- Gatherer and slicer of key performance indicators and reports using R, SQL and IBM proprietary front-end tools.
-- Gatherer of requirements and leader of discussion in fast-paced, agile environment with face-to-face customer interaction.
+- Developer of global sales intelligence and planning tools for managing dealerships at national level across multiple GM brands.
+- Builder and maintainer of ETL pipeline using R, SQL, and chron jobs.
+- Reporter of key performance indicators using R, SQL, and IBM Cognos.
+- Leader of discussion with end-user to gather requirements.
+- Creator of dashboards and prototypes using R, SQL, and Tableau.
 
 Open Source Contributions {data-icon=lock-open data-concise=false}
 --------------------------------------------------------------------------------
 
 ### Open-source Contributions
 
-For Fun & No Profit
+For Fun
 
 Remote
 
@@ -124,6 +127,7 @@ the form of documentation, tests or small features.
 
 - [DiffEq.jl](https://github.com/SciML/DiffEqDocs.jl)
 - [AbstractGPs.jl](https://github.com/JuliaGaussianProcesses/AbstractGPs.jl)
+- [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl)
 - [Franklin.jl](https://github.com/tlienart/Franklin.jl)
 - [Literate.jl](https://github.com/fredrikekre/Literate.jl)
 - [LunarVim](https://github.com/LunarVim/LunarVim)
@@ -131,11 +135,15 @@ the form of documentation, tests or small features.
 <i class="fa fa-globe"></i> <i class="fa fa-book"></i>
 I built the [SciML Book](https://book.sciml.ai/) website for MIT Course `18.337J` / `6.338J`
 
-:::aside
-**Fun fact**
+<i class="fa fa-globe"></i> <i class="fa fa-book"></i>
+I [rebuilt SciML Book](https://jvaverka.quarto.pub/sciml-book/) website for my own learning purposes.
 
-In high school I learned to solve a [Rubik's Cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) and got pretty fast at solving it (best ~45 seconds).
-Years later I was gifted a [Megaminx](https://en.wikipedia.org/wiki/Megaminx) - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik's Cube to solve it in a few hours.
+:::aside
+<i class="fa fa-info"></i> **Fun Fact**
+
+In high school I learned to solve a [Rubik's Cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) and got pretty fast at solving it (<60 seconds).
+
+Years later, I was gifted a [Megaminx](https://en.wikipedia.org/wiki/Megaminx) - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik's Cube to solve it in a few hours.
 :::
 
 
@@ -144,7 +152,7 @@ Technical Skills {data-icon=code}
 
 ### Languages and Frameworks
 
-For Fun & Potential Profit
+For Profit
 
 Remote
 
@@ -173,15 +181,15 @@ Below is a list showing some of these languages sorted by proficiency (advanced 
 :::
 
 :::aside
-[**Clifton Strengths**](https://www.gallup.com/cliftonstrengths/en/home.aspx)
+<i class="fa fa-user-plus"></i> [**Clifton Strengths**](https://www.gallup.com/cliftonstrengths/en/home.aspx)
 
 Top 5 natural talents & strengths.
 
-- Learner
-- Ideation
-- Futuristic
-- Achiever
-- Intellection
+- [Learner](https://www.gallup.com/cliftonstrengths/en/252293/learner-theme.aspx)
+- [Ideation](https://www.gallup.com/cliftonstrengths/en/252260/ideation-theme.aspx)
+- [Futuristic](https://www.gallup.com/cliftonstrengths/en/252248/futuristic-theme.aspx)
+- [Achiever](https://www.gallup.com/cliftonstrengths/en/252134/achiever-theme.aspx)
+- [Intellection](https://www.gallup.com/cliftonstrengths/en/252284/intellection-theme.aspx)
 :::
 
 Continued Learning {.page-break-before data-icon=book data-concise=false}
@@ -196,9 +204,9 @@ Remote
 2022
 
 :::aside
-**Fun fact**
+<i class="fa fa-info"></i> **Fun Fact**
 
-You can follow my [continuous learning projects](https://jvaverka.github.io/projects/) in fields like applied math, modeling / simulation, web dev and more.
+You can follow my [continuous learning projects](https://jvaverka.github.io/projects/) in fields like applied math, computer science, and more.
 :::
 
 ### Mathematics of Finance
@@ -237,7 +245,7 @@ Remote
 2015
 
 :::aside
-**Fun fact**
+<i class="fa fa-info"></i> **Fun Fact**
 
 Before landing my first IT job, I planned to pursue a career in actuarial science.
 :::
