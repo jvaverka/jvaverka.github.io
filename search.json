@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "about/resume.html",
+    "href": "about/resume.html",
+    "title": "Jacob Vaverka’s resume",
+    "section": "",
+    "text": "me\n\n\n\n\n\n jvaverka.github.io\n jvaverka\n jacob-vaverka\n\n\n\n\n\nModeling dynamic systems.\nCreating insightful visualizations.\nMaintaining HPC systems.\nBuilding full-stack & desktop apps.\nLeading diverse technical efforts.\n\n\n\n\nBuilt with pagedown.\nLast updated Nov 06, 2023."
+  },
+  {
+    "objectID": "about/resume.html#contact",
+    "href": "about/resume.html#contact",
+    "title": "Jacob Vaverka’s resume",
+    "section": "",
+    "text": "jvaverka.github.io\n jvaverka\n jacob-vaverka"
+  },
+  {
+    "objectID": "about/resume.html#skills",
+    "href": "about/resume.html#skills",
+    "title": "Jacob Vaverka’s resume",
+    "section": "",
+    "text": "Modeling dynamic systems.\nCreating insightful visualizations.\nMaintaining HPC systems.\nBuilding full-stack & desktop apps.\nLeading diverse technical efforts."
+  },
+  {
+    "objectID": "about/resume.html#disclaimer",
+    "href": "about/resume.html#disclaimer",
+    "title": "Jacob Vaverka’s resume",
+    "section": "",
+    "text": "Built with pagedown.\nLast updated Nov 06, 2023."
+  },
+  {
+    "objectID": "about/resume.html#title",
+    "href": "about/resume.html#title",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Jacob Vaverka",
+    "text": "Jacob Vaverka\n\nHPC Software Developer\nLifelong learner striving to stay curious."
+  },
+  {
+    "objectID": "about/resume.html#professional-experience",
+    "href": "about/resume.html#professional-experience",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\nSales Engineer\nJuliaHub, Inc.\nRemote\nPresent - 2021\n\nIndustrial modeling simulations running on distributed systems.\nIntegrator of Scientific Machine Learning (SciML) capabilities with large-scale industrial models.\nContributor to key software offerings for modeling and simulation framework, JuliaSim.\nWriter of JuliaSim Surrogates documentation for accelerating expensive models.\nCreator of demonstrations using JuliaSim on JuliaHub to execute simulations on cloud-compute.\nTrained customers on Julia, SciML and JuliaSim packages.\n\n\n\nHPC Application Developer\nGeneral Motors\nDetroit, MI\n2021 - 2018\n\nEngineered desktop application built on Computational Model Builder.\nBack-end HPC applications interfacing with desktop application.\nBack-end applications for encrypted file transfer across High Performance Compute environment.\nElasticsearch pipeline to capture and monitor simulation job metrics.\nData transformation pipeline to compile, submit and run OpenFOAM simulations for various CFD engineering groups.\nIn situ and situ visualizations built on ParaView.\nImplementer of engineering proof-of-concepts into production applications.\nLeader of small teams to complete various project objectives.\n\n\n\nDecision Support Analyst\nGeneral Motors\nRoswell, GA\n2018 - 2017\n\nLarge-scale queries for global market communication and Customer Relation Management.\nComplex data pipelines in SQL, Bash and Awk on OpenSUSE.\nCarefully implemented data protection practices.\n\n\n\nSystems Developer\nGeneral Motors\nRoswell, GA\n2017 - 2016\n\nGlobal sales intelligence and planning for all GM brands.\nBuilt and managed end-to-end ETL pipeline.\nDelivered key performance indicators and aggregate reports.\nFast-paced agile environment with face-to-face customer interaction."
+  },
+  {
+    "objectID": "about/resume.html#open-source-contributions",
+    "href": "about/resume.html#open-source-contributions",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Open Source Contributions",
+    "text": "Open Source Contributions\n\nSciML Open Source Scientific Machine Learning\n\nRemote\n2023 - 2022\n\nBuilt website for SciML Book MIT Course 18.337J / 6.338J.\nDocumentation updates and fixes for DiffEq.jl.\n\n\n\nFun fact: I like puzzles. In high school I learned to solve a Rubik’s Cube and got pretty fast at solving it (best ~45 seconds). Years later I was gifted a Megaminx - a dodecahedron shaped puzzle with 12 faces and 50 movable pieces - and used only my knowledge of the standard 3x3 Rubik’s Cube to solve it in 1 day.\n\n\nJulia Ecosystem\n\nRemote\n2022 - 2021\n\nDocumentation fix for AbstractGPs.\nDocumentation update for Franklin.jl.\nDocumentation fix for Literate.jl.\n\n\n\nLunarVim\n\nRemote\n2021 - 2020\n\nAdded language server support for Julia.\nAdded documentation for using julia language server.\nAdded documentation for using julia language server."
+  },
+  {
+    "objectID": "about/resume.html#technical-skills",
+    "href": "about/resume.html#technical-skills",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nLanguages and Frameworks\n\n\n\nThrough personal and professional projects I have learned and explored many programming languages and frameworks. Below is a list showing some of these languages sorted by proficiency (advanced to functional).\n\n\nLanguage\nJulia\nJavaScript\nPython\nC++\nJava\nRuby\nR\nFramework\nModelingToolkit.jl\nShiny\nReact\nRails\nDash\nVTK\nQt\n\n\n\n\nClifton Strengths\n\nLearner\nIdeation\nFuturistic\nAchiever\nIntellection"
+  },
+  {
+    "objectID": "about/resume.html#continued-learning",
+    "href": "about/resume.html#continued-learning",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Continued Learning",
+    "text": "Continued Learning\n\nAdvanced Statistical Regression\nJohns Hopkins University\nRemote\n2022\n\n\nFollow my continuous learning projects in fields like applied math, modeling / simulation, web dev and more.\n\n\nMathematics of Finance\nJohns Hopkins University\nRemote\n2021\n\n\nMatrix Theory\nJohns Hopkins University\nRemote\n2019\n\n\nStatistics and Data Analysis\nJohns Hopkins University\nRemote\n2019"
+  },
+  {
+    "objectID": "about/resume.html#certifications",
+    "href": "about/resume.html#certifications",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Certifications",
+    "text": "Certifications\n\nActuarial Science\nExam P: Probability\nRemote\n2015\n\n\nBefore landing my first IT job, I planned to pursue a career in actuarial science."
+  },
+  {
+    "objectID": "about/resume.html#education",
+    "href": "about/resume.html#education",
+    "title": "Jacob Vaverka’s resume",
+    "section": "Education",
+    "text": "Education\n\nBachelor of Science in Mathematics\nUniversity of Georgia\nAthens, GA\n2013 - 2009"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Hello"
+  },
+  {
+    "objectID": "posts/advent-of-code/index.html",
+    "href": "posts/advent-of-code/index.html",
+    "title": "Advent of Code",
+    "section": "",
+    "text": "Advent of code is a fantastic opportunity for programmers to hone their skills. Here’s a solution in Julia for Day 1, 2022."
+  },
+  {
+    "objectID": "posts/advent-of-code/index.html#input-data",
+    "href": "posts/advent-of-code/index.html#input-data",
+    "title": "Advent of Code",
+    "section": "Input Data",
+    "text": "Input Data\nStart by loading data for the sample and our full input.\n\n# https://adventofcode.com/2022/day/1\nexample = readlines(\"day_1_ex.txt\")\n\n14-element Vector{String}:\n \"1000\"\n \"2000\"\n \"3000\"\n \"\"\n \"4000\"\n \"\"\n \"5000\"\n \"6000\"\n \"\"\n \"7000\"\n \"8000\"\n \"9000\"\n \"\"\n \"10000\"\n\n\nToday’s challenge involves counting the inventory of each elf. A logical starting point is to consider the data structure. A simple vector of vectors should well represent all items of all elves.\n\nstruct Inventory\n    items::Vector{Vector{Int64}}\nend\n\nInventory has field items which will hold all the items of a particular elf. In order to create the desired vector of vectors, we want the input to be split by new lines. It is easy to write a function which takes in some vector and splits it by some function.\n\nfunction split_elf_input(λ::Function, input::Vector)\n    first, last = firstindex(input), lastindex(input)\n    splits = [first-1; findall(λ, input); last]\n    split1, split2 = splits[1:end-1], splits[2:end]\n    return [input[start+1:finish] for (start, finish) in zip(split1, split2)]\nend\n\nWe can now write the function that will parse our challenge input into the desired data structure.\n\nfunction Inventory(input::Vector{Vector{String}})\n    filter!.(!isempty, input)\n    inventory_input = map(i -&gt; parse.(Int, i), input)\n    Inventory(inventory_input)\nend"
+  },
+  {
+    "objectID": "posts/advent-of-code/index.html#solve",
+    "href": "posts/advent-of-code/index.html#solve",
+    "title": "Advent of Code",
+    "section": "Solve",
+    "text": "Solve\nSo, we have everything we need to describe the full elfish inventory. All that’s left is to describe the method of finding the top elf. We can do this in a general way so that we can elect how many of the top elves are returned.\n\ntop_elf(inventory::Inventory, nelves = 1) = mapreduce(+, 1:nelves) do elf\n    calories, index = findmax(sum.(inventory.items))\n    popat!(inventory.items, index)\n    return calories\nend\n\nParts one and two differ in the number of top elves required. We can write separate functions to accomodate this.\n\npart_1(input) = top_elf(Inventory(split_elf_input(isempty, input)))\npart_2(input) = top_elf(Inventory(split_elf_input(isempty, input)), 3)\n\nTime to solve!\n\npart_1(example)\n\n24000\n\n\n\npart_2(example)\n\n45000"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Subscribe via RSS! \n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome!\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2023\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code\n\n\nDay 1\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nNov 27, 2022\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Sometimes I study various topics in mathematics, computer science, and other areas. My learning process and findings are documented to help my future self and maybe other interested individuals.\n\nPrinciples of Object-Oriented Modeling and Simulation with Modelica 3.3: A Cyber-Physical Approach\nData Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles, Fifth Edition\nStructure and Intrepretations of Computer Programs"
+  },
+  {
+    "objectID": "projects/index.html#continuous-learning",
+    "href": "projects/index.html#continuous-learning",
+    "title": "Projects",
+    "section": "",
+    "text": "Sometimes I study various topics in mathematics, computer science, and other areas. My learning process and findings are documented to help my future self and maybe other interested individuals.\n\nPrinciples of Object-Oriented Modeling and Simulation with Modelica 3.3: A Cyber-Physical Approach\nData Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles, Fifth Edition\nStructure and Intrepretations of Computer Programs"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "I like puzzles, math, science and programming.\nSee my resume to learn more."
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/welcome/index.html",
+      "/posts/advent-of-code/index.html"
+    ]
+  }
+]
